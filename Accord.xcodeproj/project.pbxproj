@@ -14,6 +14,7 @@
 		3885867919CA9CBC00E79A17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3885867819CA9CBC00E79A17 /* Images.xcassets */; };
 		3885867C19CA9CBC00E79A17 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3885867A19CA9CBC00E79A17 /* LaunchScreen.xib */; };
 		3885868819CA9CBC00E79A17 /* AccordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885868719CA9CBC00E79A17 /* AccordTests.swift */; };
+		38A5FB1A19CAA8E700FCB998 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A5FB1919CAA8E700FCB998 /* CalendarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		3885868119CA9CBC00E79A17 /* AccordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3885868619CA9CBC00E79A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3885868719CA9CBC00E79A17 /* AccordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordTests.swift; sourceTree = "<group>"; };
+		38A5FB1919CAA8E700FCB998 /* CalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				3885867319CA9CBC00E79A17 /* ViewController.swift */,
+				38A5FB1819CAA8D700FCB998 /* Specialized Controllers */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -137,6 +140,14 @@
 				3885867019CA9CBC00E79A17 /* Accord.xcdatamodeld */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		38A5FB1819CAA8D700FCB998 /* Specialized Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				38A5FB1919CAA8E700FCB998 /* CalendarController.swift */,
+			);
+			name = "Specialized Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3885867419CA9CBC00E79A17 /* ViewController.swift in Sources */,
+				38A5FB1A19CAA8E700FCB998 /* CalendarController.swift in Sources */,
 				3885866F19CA9CBC00E79A17 /* AppDelegate.swift in Sources */,
 				3885867219CA9CBC00E79A17 /* Accord.xcdatamodeld in Sources */,
 			);
@@ -435,6 +447,7 @@
 				3885868D19CA9CBC00E79A17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3885868E19CA9CBC00E79A17 /* Build configuration list for PBXNativeTarget "AccordTests" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +456,7 @@
 				3885869019CA9CBC00E79A17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
