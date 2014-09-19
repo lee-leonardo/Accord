@@ -12,52 +12,38 @@ import EventKit
 class CalendarController {
     
     var eventStore : EKEventStore
+    var calendar : EKCalendar?
     
     init() {
         
         //Persists, create an EKEventStore once for a long time.
         //Stores hold calendars which hold events and reminders.
-        
+
         self.eventStore = EKEventStore()
         self.eventStore.requestAccessToEntityType(EKEntityTypeEvent) {
             (granted, error) -> Void in
-            if granted {
-                
-            } else {
+            if !granted {
                 println("\(error.localizedDescription)")
+            } else {
+                if let calID = NSUserDefaults.standardUserDefaults().objectForKey("CalendarIdentifier") as? String {
+                    self.calendar = self.eventStore.calendarWithIdentifier(calID) ?? self.eventStore.defaultCalendarForNewEvents
+                } else {
+                    self.generateCalendar()
+                }
             }
         }
-        
-//This is for the controller that houses the EKEventStoreController.
-//        NSNotificationCenter.defaultCenter().addObserverForName(EKEventStoreChangedNotification, object: self, queue: <#NSOperationQueue?#>) {
-//            (note) -> Void in
-//            <#code#>
-//        }
     }
     
     //TODO: Check for Updates to the Calendar, Add new reminders, notify user
     
-    
-    
-    
-    //MARK:
-    func updateCalendars() {
-        
+    //MARK: Calendar
+    func generateCalendar() {
+        self.calendar = EKCalendar(forEntityType: EKEntityTypeEvent, eventStore: self.eventStore)
+        NSUserDefaults.standardUserDefaults().setObject(self.calendar!.calendarIdentifier, forKey: "CalendarIdentifier")
     }
     
-    //MARK:
-    //This doesn't create... got to fix this up.
-    func createChoreList() {
-        let store = EKEventStore()
-        store.requestAccessToEntityType(EKEntityTypeReminder, completion: {
-            (bool: Bool, error: NSError!) -> Void in
-            if error != nil {
-                println("\(error.localizedDescription)")
-            } else {
-                
-            }
-        })
-        let calendar = EKCalendar(forEntityType: EKEntityTypeReminder, eventStore: self.eventStore)
+    func updateCalendars() {
+        
     }
     
     //MARK:
@@ -66,7 +52,12 @@ class CalendarController {
             
         }
     }
-    
-    
-    
 }
+
+
+
+//This is for the controller that houses the EKEventStoreController.
+//        NSNotificationCenter.defaultCenter().addObserverForName(EKEventStoreChangedNotification, object: self, queue: <#NSOperationQueue?#>) {
+//            (note) -> Void in
+//            <#code#>
+//        }
