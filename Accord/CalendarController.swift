@@ -40,9 +40,19 @@ class CalendarController {
     func generateCalendar() {
         self.calendar = EKCalendar(forEntityType: EKEntityTypeEvent, eventStore: self.eventStore)
         NSUserDefaults.standardUserDefaults().setObject(self.calendar!.calendarIdentifier, forKey: "CalendarIdentifier")
+        self.calendar!.title = "Accord Scheule"
+        
     }
     
     func updateCalendars() {
+        var error : NSError?
+        
+        //I don't know if synchronous or batch is preferred...
+        self.eventStore.saveCalendar(self.calendar, commit: true, error: &error)
+        
+        if error != nil {
+            println("\(error?.localizedDescription)")
+        }
         
     }
     

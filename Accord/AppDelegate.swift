@@ -13,6 +13,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var calendarController : CalendarController?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -28,6 +29,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        if calendarController != nil {
+            var calendarSave = application.beginBackgroundTaskWithExpirationHandler {
+                () -> Void in
+                
+                var error : NSError?
+                self.calendarController?.eventStore.commit(&error)
+                
+                if error != nil {
+                    println("\(error?.localizedDescription)")
+                    //Send a message to crash/problem reporter stuff I'll implement later.
+                }
+                
+            }
+            
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
+                () -> Void in
+                application.endBackgroundTask(calendarSave)
+                calendarSave = UIBackgroundTaskInvalid
+            })
+        }
+        
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
