@@ -15,7 +15,6 @@ class CalendarController {
     var calendar : EKCalendar?
     
     init() {
-        
         //Persists, create an EKEventStore once for a long time.
         //Stores hold calendars which hold events and reminders.
 
@@ -36,18 +35,21 @@ class CalendarController {
     
     //TODO: Check for Updates to the Calendar, Add new reminders, notify user
     
-    //MARK: Calendar
+    //MARK: - Calendar
     func generateCalendar() {
         self.calendar = EKCalendar(forEntityType: EKEntityTypeEvent, eventStore: self.eventStore)
         NSUserDefaults.standardUserDefaults().setObject(self.calendar!.calendarIdentifier, forKey: "CalendarIdentifier")
-        self.calendar!.title = "Accord Scheule"
+        //This is also where I'll save it to Core Data.
+        
+        self.calendar!.title = "Accord Schedule"
+        //self.calendar!.source =
         
     }
     
     func updateCalendars() {
         var error : NSError?
         
-        //I don't know if synchronous or batch is preferred...
+        //Batch is preferred... so I'll be tailoring to that in a moment.
         self.eventStore.saveCalendar(self.calendar, commit: true, error: &error)
         
         if error != nil {
@@ -56,11 +58,16 @@ class CalendarController {
         
     }
     
-    //MARK:
-    func createRecurringEvent(frequency: EKRecurrenceFrequency, interval: Int, end: NSDate?) {
-        if end == nil {
-            
-        }
+    //MARK: - Events
+    func createEvent() {
+        var event = EKEvent(eventStore: self.eventStore)
+        
+    }
+    
+    //I do not know if this is a feature I'd like yet, but it is nice to experiment with atm.
+    //MARK: Reminders?
+    func createRemindersForToday() {
+        //This app fires everytime the app is opened to generate the task list, which then one can schedule for and confirm.
     }
 }
 

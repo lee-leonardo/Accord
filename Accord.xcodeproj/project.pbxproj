@@ -15,6 +15,13 @@
 		3885867C19CA9CBC00E79A17 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3885867A19CA9CBC00E79A17 /* LaunchScreen.xib */; };
 		3885868819CA9CBC00E79A17 /* AccordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885868719CA9CBC00E79A17 /* AccordTests.swift */; };
 		38A5FB1A19CAA8E700FCB998 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A5FB1919CAA8E700FCB998 /* CalendarController.swift */; };
+		38BFE66219CCC54800E130D5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BFE66119CCC54800E130D5 /* DataController.swift */; };
+		38BFE66619CCD1C700E130D5 /* Chore.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BFE66519CCD1C700E130D5 /* Chore.m */; };
+		38BFE66919CCD1C800E130D5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BFE66819CCD1C800E130D5 /* User.m */; };
+		38BFE66C19CCD1C800E130D5 /* ChoreList.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BFE66B19CCD1C800E130D5 /* ChoreList.m */; };
+		38BFE67119CCD23800E130D5 /* User+UserCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BFE67019CCD23800E130D5 /* User+UserCategory.m */; };
+		38BFE67419CCD24600E130D5 /* Chore+ChoreCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BFE67319CCD24600E130D5 /* Chore+ChoreCategory.m */; };
+		38BFE67819CCD25C00E130D5 /* ChoreList+ChoreListCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BFE67719CCD25C00E130D5 /* ChoreList+ChoreListCategory.m */; };
 		38DD044219CBF73F00A0FE50 /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD044119CBF73F00A0FE50 /* EventController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +48,20 @@
 		3885868619CA9CBC00E79A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3885868719CA9CBC00E79A17 /* AccordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordTests.swift; sourceTree = "<group>"; };
 		38A5FB1919CAA8E700FCB998 /* CalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
+		38BFE66119CCC54800E130D5 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		38BFE66319CCD1C700E130D5 /* Accord-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Accord-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		38BFE66419CCD1C700E130D5 /* Chore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Chore.h; path = "CD Models/Chore.h"; sourceTree = "<group>"; };
+		38BFE66519CCD1C700E130D5 /* Chore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Chore.m; path = "CD Models/Chore.m"; sourceTree = "<group>"; };
+		38BFE66719CCD1C800E130D5 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = "CD Models/User.h"; sourceTree = "<group>"; };
+		38BFE66819CCD1C800E130D5 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = "CD Models/User.m"; sourceTree = "<group>"; };
+		38BFE66A19CCD1C800E130D5 /* ChoreList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChoreList.h; path = "CD Models/ChoreList.h"; sourceTree = "<group>"; };
+		38BFE66B19CCD1C800E130D5 /* ChoreList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChoreList.m; path = "CD Models/ChoreList.m"; sourceTree = "<group>"; };
+		38BFE66F19CCD23800E130D5 /* User+UserCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "User+UserCategory.h"; sourceTree = "<group>"; };
+		38BFE67019CCD23800E130D5 /* User+UserCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "User+UserCategory.m"; sourceTree = "<group>"; };
+		38BFE67219CCD24600E130D5 /* Chore+ChoreCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Chore+ChoreCategory.h"; sourceTree = "<group>"; };
+		38BFE67319CCD24600E130D5 /* Chore+ChoreCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Chore+ChoreCategory.m"; sourceTree = "<group>"; };
+		38BFE67619CCD25C00E130D5 /* ChoreList+ChoreListCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChoreList+ChoreListCategory.h"; sourceTree = "<group>"; };
+		38BFE67719CCD25C00E130D5 /* ChoreList+ChoreListCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChoreList+ChoreListCategory.m"; sourceTree = "<group>"; };
 		38DD044119CBF73F00A0FE50 /* EventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				3885866E19CA9CBC00E79A17 /* AppDelegate.swift */,
+				38BFE66319CCD1C700E130D5 /* Accord-Bridging-Header.h */,
 				3885869319CA9CD400E79A17 /* Model */,
 				3885869219CA9CCE00E79A17 /* Controller */,
 				3885869119CA9CC700E79A17 /* View */,
@@ -141,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				3885867019CA9CBC00E79A17 /* Accord.xcdatamodeld */,
+				38BFE66D19CCD20100E130D5 /* NSManagedModels */,
+				38BFE66E19CCD20E00E130D5 /* Categories */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -149,8 +173,35 @@
 			isa = PBXGroup;
 			children = (
 				38A5FB1919CAA8E700FCB998 /* CalendarController.swift */,
+				38BFE66119CCC54800E130D5 /* DataController.swift */,
 			);
 			name = "Specialized Controllers";
+			sourceTree = "<group>";
+		};
+		38BFE66D19CCD20100E130D5 /* NSManagedModels */ = {
+			isa = PBXGroup;
+			children = (
+				38BFE66A19CCD1C800E130D5 /* ChoreList.h */,
+				38BFE66B19CCD1C800E130D5 /* ChoreList.m */,
+				38BFE66719CCD1C800E130D5 /* User.h */,
+				38BFE66819CCD1C800E130D5 /* User.m */,
+				38BFE66419CCD1C700E130D5 /* Chore.h */,
+				38BFE66519CCD1C700E130D5 /* Chore.m */,
+			);
+			name = NSManagedModels;
+			sourceTree = "<group>";
+		};
+		38BFE66E19CCD20E00E130D5 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				38BFE66F19CCD23800E130D5 /* User+UserCategory.h */,
+				38BFE67019CCD23800E130D5 /* User+UserCategory.m */,
+				38BFE67219CCD24600E130D5 /* Chore+ChoreCategory.h */,
+				38BFE67319CCD24600E130D5 /* Chore+ChoreCategory.m */,
+				38BFE67619CCD25C00E130D5 /* ChoreList+ChoreListCategory.h */,
+				38BFE67719CCD25C00E130D5 /* ChoreList+ChoreListCategory.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,11 +304,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38BFE66919CCD1C800E130D5 /* User.m in Sources */,
 				3885867419CA9CBC00E79A17 /* ViewController.swift in Sources */,
+				38BFE66619CCD1C700E130D5 /* Chore.m in Sources */,
+				38BFE67819CCD25C00E130D5 /* ChoreList+ChoreListCategory.m in Sources */,
+				38BFE66C19CCD1C800E130D5 /* ChoreList.m in Sources */,
+				38BFE66219CCC54800E130D5 /* DataController.swift in Sources */,
 				38A5FB1A19CAA8E700FCB998 /* CalendarController.swift in Sources */,
+				38BFE67419CCD24600E130D5 /* Chore+ChoreCategory.m in Sources */,
 				38DD044219CBF73F00A0FE50 /* EventController.swift in Sources */,
 				3885866F19CA9CBC00E79A17 /* AppDelegate.swift in Sources */,
 				3885867219CA9CBC00E79A17 /* Accord.xcdatamodeld in Sources */,
+				38BFE67119CCD23800E130D5 /* User+UserCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,9 +440,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Accord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Accord-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -392,9 +453,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Accord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Accord-Bridging-Header.h";
 			};
 			name = Release;
 		};
