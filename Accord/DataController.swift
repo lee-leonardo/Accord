@@ -41,4 +41,8 @@ class DataController {
     //MARK: Fetch
 //    func fetchObjects(list: ChoreList) -> [Chores] {}
     
+    func retrieveUserData() {
+        
+    }
+    
 }

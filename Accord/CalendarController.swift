@@ -61,6 +61,7 @@ class CalendarController {
     //MARK: - Events
     func createEvent() {
         var event = EKEvent(eventStore: self.eventStore)
+        //event.eventIdentifier //Gotta save this.
         
     }
     
@@ -68,6 +69,13 @@ class CalendarController {
     //MARK: Reminders?
     func createRemindersForToday() {
         //This app fires everytime the app is opened to generate the task list, which then one can schedule for and confirm.
+        
+        var reminder = EKReminder(eventStore: self.eventStore)
+        var startComponents = reminder.startDateComponents
+        //startComponents.month
+        
+        var dueComponents = reminder.dueDateComponents
+        
     }
 }
 
