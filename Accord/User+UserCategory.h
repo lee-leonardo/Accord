@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 Leonardo Lee. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
 #import "User.h"
 
 @interface User (UserCategory)

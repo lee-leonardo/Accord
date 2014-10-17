@@ -14,6 +14,10 @@ class CalendarController {
     var eventStore : EKEventStore
     var calendar : EKCalendar?
     
+    class func instance() {
+//        var calendar
+    }
+    
     init() {
         //Persists, create an EKEventStore once for a long time.
         //Stores hold calendars which hold events and reminders.
