@@ -12,6 +12,4 @@ import EventKitUI
 //I don't know if this is possible... worth a shot.
 class EventController {
     
-    
-    
 }

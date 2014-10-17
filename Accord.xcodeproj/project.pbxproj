@@ -7,9 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		385DA08319F1A35D007FED54 /* flow-merge.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA06D19F1A35D007FED54 /* flow-merge.svg */; };
+		385DA08419F1A35D007FED54 /* flow-parallel.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA06E19F1A35D007FED54 /* flow-parallel.svg */; };
+		385DA08519F1A35D007FED54 /* flow-switch.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA06F19F1A35D007FED54 /* flow-switch.svg */; };
+		385DA08619F1A35D007FED54 /* infinity.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA07019F1A35D007FED54 /* infinity.svg */; };
+		385DA08719F1A35D007FED54 /* minus-outline.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA07119F1A35D007FED54 /* minus-outline.svg */; };
+		385DA08819F1A35D007FED54 /* minus.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA07219F1A35D007FED54 /* minus.svg */; };
+		385DA08919F1A35D007FED54 /* plus-outline.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA07319F1A35D007FED54 /* plus-outline.svg */; };
+		385DA08A19F1A35D007FED54 /* plus.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA07419F1A35D007FED54 /* plus.svg */; };
+		385DA08B19F1A35D007FED54 /* star-outline.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA07519F1A35D007FED54 /* star-outline.svg */; };
+		385DA08C19F1A35D007FED54 /* star.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA07619F1A35D007FED54 /* star.svg */; };
+		385DA08D19F1A35D007FED54 /* th-list-outline.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA07719F1A35D007FED54 /* th-list-outline.svg */; };
+		385DA08E19F1A35D007FED54 /* th-list.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA07819F1A35D007FED54 /* th-list.svg */; };
+		385DA08F19F1A35D007FED54 /* tick-outline.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA07919F1A35D007FED54 /* tick-outline.svg */; };
+		385DA09019F1A35D007FED54 /* tick.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA07A19F1A35D007FED54 /* tick.svg */; };
+		385DA09119F1A35D007FED54 /* times-outline.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA07B19F1A35D007FED54 /* times-outline.svg */; };
+		385DA09219F1A35D007FED54 /* times.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA07C19F1A35D007FED54 /* times.svg */; };
+		385DA09319F1A35D007FED54 /* user-add-outline.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA07D19F1A35D007FED54 /* user-add-outline.svg */; };
+		385DA09419F1A35D007FED54 /* user-add.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA07E19F1A35D007FED54 /* user-add.svg */; };
+		385DA09519F1A35D007FED54 /* user-delete-outline.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA07F19F1A35D007FED54 /* user-delete-outline.svg */; };
+		385DA09619F1A35D007FED54 /* user-delete.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA08019F1A35D007FED54 /* user-delete.svg */; };
+		385DA09719F1A35D007FED54 /* user-outline.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA08119F1A35D007FED54 /* user-outline.svg */; };
+		385DA09819F1A35D007FED54 /* user.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA08219F1A35D007FED54 /* user.svg */; };
+		385DA09A19F1B363007FED54 /* ChoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385DA09919F1B363007FED54 /* ChoreCell.xib */; };
+		385DA09C19F1B3A4007FED54 /* ChoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385DA09B19F1B3A4007FED54 /* ChoreCell.swift */; };
+		385DA09E19F1B852007FED54 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385DA09D19F1B852007FED54 /* UserViewController.swift */; };
+		385DA0A019F1B85F007FED54 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385DA09F19F1B85F007FED54 /* ListViewController.swift */; };
+		385DA0A219F1BEAC007FED54 /* UserSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385DA0A119F1BEAC007FED54 /* UserSettingViewController.swift */; };
+		385DA0A419F1C9F2007FED54 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385DA0A319F1C9F2007FED54 /* SettingCell.swift */; };
+		385DA0A619F1CA00007FED54 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385DA0A519F1CA00007FED54 /* SettingCell.xib */; };
 		3885866F19CA9CBC00E79A17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885866E19CA9CBC00E79A17 /* AppDelegate.swift */; };
 		3885867219CA9CBC00E79A17 /* Accord.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3885867019CA9CBC00E79A17 /* Accord.xcdatamodeld */; };
-		3885867419CA9CBC00E79A17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885867319CA9CBC00E79A17 /* ViewController.swift */; };
 		3885867719CA9CBC00E79A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3885867519CA9CBC00E79A17 /* Main.storyboard */; };
 		3885867919CA9CBC00E79A17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3885867819CA9CBC00E79A17 /* Images.xcassets */; };
 		3885867C19CA9CBC00E79A17 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3885867A19CA9CBC00E79A17 /* LaunchScreen.xib */; };
@@ -36,11 +64,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		385DA06D19F1A35D007FED54 /* flow-merge.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "flow-merge.svg"; sourceTree = "<group>"; };
+		385DA06E19F1A35D007FED54 /* flow-parallel.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "flow-parallel.svg"; sourceTree = "<group>"; };
+		385DA06F19F1A35D007FED54 /* flow-switch.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "flow-switch.svg"; sourceTree = "<group>"; };
+		385DA07019F1A35D007FED54 /* infinity.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = infinity.svg; sourceTree = "<group>"; };
+		385DA07119F1A35D007FED54 /* minus-outline.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "minus-outline.svg"; sourceTree = "<group>"; };
+		385DA07219F1A35D007FED54 /* minus.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = minus.svg; sourceTree = "<group>"; };
+		385DA07319F1A35D007FED54 /* plus-outline.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "plus-outline.svg"; sourceTree = "<group>"; };
+		385DA07419F1A35D007FED54 /* plus.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = plus.svg; sourceTree = "<group>"; };
+		385DA07519F1A35D007FED54 /* star-outline.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "star-outline.svg"; sourceTree = "<group>"; };
+		385DA07619F1A35D007FED54 /* star.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = star.svg; sourceTree = "<group>"; };
+		385DA07719F1A35D007FED54 /* th-list-outline.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "th-list-outline.svg"; sourceTree = "<group>"; };
+		385DA07819F1A35D007FED54 /* th-list.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "th-list.svg"; sourceTree = "<group>"; };
+		385DA07919F1A35D007FED54 /* tick-outline.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "tick-outline.svg"; sourceTree = "<group>"; };
+		385DA07A19F1A35D007FED54 /* tick.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = tick.svg; sourceTree = "<group>"; };
+		385DA07B19F1A35D007FED54 /* times-outline.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "times-outline.svg"; sourceTree = "<group>"; };
+		385DA07C19F1A35D007FED54 /* times.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = times.svg; sourceTree = "<group>"; };
+		385DA07D19F1A35D007FED54 /* user-add-outline.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "user-add-outline.svg"; sourceTree = "<group>"; };
+		385DA07E19F1A35D007FED54 /* user-add.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "user-add.svg"; sourceTree = "<group>"; };
+		385DA07F19F1A35D007FED54 /* user-delete-outline.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "user-delete-outline.svg"; sourceTree = "<group>"; };
+		385DA08019F1A35D007FED54 /* user-delete.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "user-delete.svg"; sourceTree = "<group>"; };
+		385DA08119F1A35D007FED54 /* user-outline.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "user-outline.svg"; sourceTree = "<group>"; };
+		385DA08219F1A35D007FED54 /* user.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = user.svg; sourceTree = "<group>"; };
+		385DA09919F1B363007FED54 /* ChoreCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChoreCell.xib; sourceTree = "<group>"; };
+		385DA09B19F1B3A4007FED54 /* ChoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChoreCell.swift; sourceTree = "<group>"; };
+		385DA09D19F1B852007FED54 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		385DA09F19F1B85F007FED54 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		385DA0A119F1BEAC007FED54 /* UserSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingViewController.swift; sourceTree = "<group>"; };
+		385DA0A319F1C9F2007FED54 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		385DA0A519F1CA00007FED54 /* SettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
 		3885866919CA9CBC00E79A17 /* Accord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Accord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3885866D19CA9CBC00E79A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3885866E19CA9CBC00E79A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3885867119CA9CBC00E79A17 /* Accord.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Accord.xcdatamodel; sourceTree = "<group>"; };
-		3885867319CA9CBC00E79A17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3885867619CA9CBC00E79A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3885867819CA9CBC00E79A17 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3885867B19CA9CBC00E79A17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -83,6 +139,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		385DA06C19F1A35D007FED54 /* SVG */ = {
+			isa = PBXGroup;
+			children = (
+				385DA06D19F1A35D007FED54 /* flow-merge.svg */,
+				385DA06E19F1A35D007FED54 /* flow-parallel.svg */,
+				385DA06F19F1A35D007FED54 /* flow-switch.svg */,
+				385DA07019F1A35D007FED54 /* infinity.svg */,
+				385DA07119F1A35D007FED54 /* minus-outline.svg */,
+				385DA07219F1A35D007FED54 /* minus.svg */,
+				385DA07319F1A35D007FED54 /* plus-outline.svg */,
+				385DA07419F1A35D007FED54 /* plus.svg */,
+				385DA07519F1A35D007FED54 /* star-outline.svg */,
+				385DA07619F1A35D007FED54 /* star.svg */,
+				385DA07719F1A35D007FED54 /* th-list-outline.svg */,
+				385DA07819F1A35D007FED54 /* th-list.svg */,
+				385DA07919F1A35D007FED54 /* tick-outline.svg */,
+				385DA07A19F1A35D007FED54 /* tick.svg */,
+				385DA07B19F1A35D007FED54 /* times-outline.svg */,
+				385DA07C19F1A35D007FED54 /* times.svg */,
+				385DA07D19F1A35D007FED54 /* user-add-outline.svg */,
+				385DA07E19F1A35D007FED54 /* user-add.svg */,
+				385DA07F19F1A35D007FED54 /* user-delete-outline.svg */,
+				385DA08019F1A35D007FED54 /* user-delete.svg */,
+				385DA08119F1A35D007FED54 /* user-outline.svg */,
+				385DA08219F1A35D007FED54 /* user.svg */,
+			);
+			path = SVG;
+			sourceTree = "<group>";
+		};
 		3885866019CA9CBC00E79A17 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +195,7 @@
 				3885869219CA9CCE00E79A17 /* Controller */,
 				3885869119CA9CC700E79A17 /* View */,
 				3885867819CA9CBC00E79A17 /* Images.xcassets */,
+				385DA06C19F1A35D007FED54 /* SVG */,
 				3885866C19CA9CBC00E79A17 /* Supporting Files */,
 			);
 			path = Accord;
@@ -145,6 +231,10 @@
 			children = (
 				3885867519CA9CBC00E79A17 /* Main.storyboard */,
 				3885867A19CA9CBC00E79A17 /* LaunchScreen.xib */,
+				385DA09B19F1B3A4007FED54 /* ChoreCell.swift */,
+				385DA09919F1B363007FED54 /* ChoreCell.xib */,
+				385DA0A319F1C9F2007FED54 /* SettingCell.swift */,
+				385DA0A519F1CA00007FED54 /* SettingCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -152,9 +242,10 @@
 		3885869219CA9CCE00E79A17 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3885867319CA9CBC00E79A17 /* ViewController.swift */,
-				38DD044119CBF73F00A0FE50 /* EventController.swift */,
-				38A5FB1819CAA8D700FCB998 /* Specialized Controllers */,
+				385DA09D19F1B852007FED54 /* UserViewController.swift */,
+				385DA0A119F1BEAC007FED54 /* UserSettingViewController.swift */,
+				385DA09F19F1B85F007FED54 /* ListViewController.swift */,
+				38A5FB1819CAA8D700FCB998 /* Framework Controllers */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -169,13 +260,14 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		38A5FB1819CAA8D700FCB998 /* Specialized Controllers */ = {
+		38A5FB1819CAA8D700FCB998 /* Framework Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				38DD044119CBF73F00A0FE50 /* EventController.swift */,
 				38A5FB1919CAA8E700FCB998 /* CalendarController.swift */,
 				38BFE66119CCC54800E130D5 /* DataController.swift */,
 			);
-			name = "Specialized Controllers";
+			name = "Framework Controllers";
 			sourceTree = "<group>";
 		};
 		38BFE66D19CCD20100E130D5 /* NSManagedModels */ = {
@@ -284,9 +376,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				385DA09019F1A35D007FED54 /* tick.svg in Resources */,
+				385DA08C19F1A35D007FED54 /* star.svg in Resources */,
+				385DA08D19F1A35D007FED54 /* th-list-outline.svg in Resources */,
+				385DA09519F1A35D007FED54 /* user-delete-outline.svg in Resources */,
+				385DA09619F1A35D007FED54 /* user-delete.svg in Resources */,
+				385DA09219F1A35D007FED54 /* times.svg in Resources */,
+				385DA08719F1A35D007FED54 /* minus-outline.svg in Resources */,
+				385DA09819F1A35D007FED54 /* user.svg in Resources */,
+				385DA08419F1A35D007FED54 /* flow-parallel.svg in Resources */,
+				385DA08819F1A35D007FED54 /* minus.svg in Resources */,
 				3885867719CA9CBC00E79A17 /* Main.storyboard in Resources */,
+				385DA08F19F1A35D007FED54 /* tick-outline.svg in Resources */,
+				385DA08519F1A35D007FED54 /* flow-switch.svg in Resources */,
+				385DA08B19F1A35D007FED54 /* star-outline.svg in Resources */,
+				385DA08E19F1A35D007FED54 /* th-list.svg in Resources */,
+				385DA09419F1A35D007FED54 /* user-add.svg in Resources */,
+				385DA08619F1A35D007FED54 /* infinity.svg in Resources */,
+				385DA09119F1A35D007FED54 /* times-outline.svg in Resources */,
+				385DA08319F1A35D007FED54 /* flow-merge.svg in Resources */,
+				385DA09719F1A35D007FED54 /* user-outline.svg in Resources */,
+				385DA08919F1A35D007FED54 /* plus-outline.svg in Resources */,
+				385DA09319F1A35D007FED54 /* user-add-outline.svg in Resources */,
+				385DA0A619F1CA00007FED54 /* SettingCell.xib in Resources */,
 				3885867C19CA9CBC00E79A17 /* LaunchScreen.xib in Resources */,
+				385DA08A19F1A35D007FED54 /* plus.svg in Resources */,
 				3885867919CA9CBC00E79A17 /* Images.xcassets in Resources */,
+				385DA09A19F1B363007FED54 /* ChoreCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,13 +421,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				38BFE66919CCD1C800E130D5 /* User.m in Sources */,
-				3885867419CA9CBC00E79A17 /* ViewController.swift in Sources */,
 				38BFE66619CCD1C700E130D5 /* Chore.m in Sources */,
+				385DA09E19F1B852007FED54 /* UserViewController.swift in Sources */,
 				38BFE67819CCD25C00E130D5 /* ChoreList+ChoreListCategory.m in Sources */,
 				38BFE66C19CCD1C800E130D5 /* ChoreList.m in Sources */,
 				38BFE66219CCC54800E130D5 /* DataController.swift in Sources */,
+				385DA0A419F1C9F2007FED54 /* SettingCell.swift in Sources */,
+				385DA0A019F1B85F007FED54 /* ListViewController.swift in Sources */,
+				385DA09C19F1B3A4007FED54 /* ChoreCell.swift in Sources */,
 				38A5FB1A19CAA8E700FCB998 /* CalendarController.swift in Sources */,
 				38BFE67419CCD24600E130D5 /* Chore+ChoreCategory.m in Sources */,
+				385DA0A219F1BEAC007FED54 /* UserSettingViewController.swift in Sources */,
 				38DD044219CBF73F00A0FE50 /* EventController.swift in Sources */,
 				3885866F19CA9CBC00E79A17 /* AppDelegate.swift in Sources */,
 				3885867219CA9CBC00E79A17 /* Accord.xcdatamodeld in Sources */,
