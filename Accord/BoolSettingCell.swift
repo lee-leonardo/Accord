@@ -1,5 +1,5 @@
 //
-//  SettingCell.swift
+//  BoolSettingCell.swift
 //  Accord
 //
 //  Created by Leonardo Lee on 10/17/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingCell: UITableViewCell {
+class BoolSettingCell: UITableViewCell {
 
     @IBOutlet weak var settingLabel: UILabel!
     @IBOutlet weak var settingSwitch: UISwitch!

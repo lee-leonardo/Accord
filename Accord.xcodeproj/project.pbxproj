@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		381D8C8B19F33980002F587F /* SegControlSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381D8C8A19F33980002F587F /* SegControlSettingCell.xib */; };
+		381D8C8D19F33A16002F587F /* SegControlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381D8C8C19F33A16002F587F /* SegControlTableViewCell.swift */; };
+		381D8C8F19F34478002F587F /* NewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381D8C8E19F34478002F587F /* NewListViewController.swift */; };
+		381D8C9119F346CA002F587F /* ListChoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381D8C9019F346CA002F587F /* ListChoresViewController.swift */; };
 		385DA08319F1A35D007FED54 /* flow-merge.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA06D19F1A35D007FED54 /* flow-merge.svg */; };
 		385DA08419F1A35D007FED54 /* flow-parallel.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA06E19F1A35D007FED54 /* flow-parallel.svg */; };
 		385DA08519F1A35D007FED54 /* flow-switch.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA06F19F1A35D007FED54 /* flow-switch.svg */; };
@@ -34,8 +38,8 @@
 		385DA09E19F1B852007FED54 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385DA09D19F1B852007FED54 /* UserViewController.swift */; };
 		385DA0A019F1B85F007FED54 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385DA09F19F1B85F007FED54 /* ListViewController.swift */; };
 		385DA0A219F1BEAC007FED54 /* UserSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385DA0A119F1BEAC007FED54 /* UserSettingViewController.swift */; };
-		385DA0A419F1C9F2007FED54 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385DA0A319F1C9F2007FED54 /* SettingCell.swift */; };
-		385DA0A619F1CA00007FED54 /* SettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385DA0A519F1CA00007FED54 /* SettingCell.xib */; };
+		385DA0A419F1C9F2007FED54 /* BoolSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385DA0A319F1C9F2007FED54 /* BoolSettingCell.swift */; };
+		385DA0A619F1CA00007FED54 /* BoolSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 385DA0A519F1CA00007FED54 /* BoolSettingCell.xib */; };
 		3885866F19CA9CBC00E79A17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885866E19CA9CBC00E79A17 /* AppDelegate.swift */; };
 		3885867219CA9CBC00E79A17 /* Accord.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3885867019CA9CBC00E79A17 /* Accord.xcdatamodeld */; };
 		3885867719CA9CBC00E79A17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3885867519CA9CBC00E79A17 /* Main.storyboard */; };
@@ -64,6 +68,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		381D8C8A19F33980002F587F /* SegControlSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegControlSettingCell.xib; sourceTree = "<group>"; };
+		381D8C8C19F33A16002F587F /* SegControlTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegControlTableViewCell.swift; sourceTree = "<group>"; };
+		381D8C8E19F34478002F587F /* NewListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewListViewController.swift; sourceTree = "<group>"; };
+		381D8C9019F346CA002F587F /* ListChoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListChoresViewController.swift; sourceTree = "<group>"; };
 		385DA06D19F1A35D007FED54 /* flow-merge.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "flow-merge.svg"; sourceTree = "<group>"; };
 		385DA06E19F1A35D007FED54 /* flow-parallel.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "flow-parallel.svg"; sourceTree = "<group>"; };
 		385DA06F19F1A35D007FED54 /* flow-switch.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "flow-switch.svg"; sourceTree = "<group>"; };
@@ -91,8 +99,8 @@
 		385DA09D19F1B852007FED54 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		385DA09F19F1B85F007FED54 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		385DA0A119F1BEAC007FED54 /* UserSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingViewController.swift; sourceTree = "<group>"; };
-		385DA0A319F1C9F2007FED54 /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
-		385DA0A519F1CA00007FED54 /* SettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingCell.xib; sourceTree = "<group>"; };
+		385DA0A319F1C9F2007FED54 /* BoolSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoolSettingCell.swift; sourceTree = "<group>"; };
+		385DA0A519F1CA00007FED54 /* BoolSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoolSettingCell.xib; sourceTree = "<group>"; };
 		3885866919CA9CBC00E79A17 /* Accord.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Accord.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3885866D19CA9CBC00E79A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3885866E19CA9CBC00E79A17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +147,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		381D8C8919F3393C002F587F /* TableCell */ = {
+			isa = PBXGroup;
+			children = (
+				385DA09B19F1B3A4007FED54 /* ChoreCell.swift */,
+				385DA09919F1B363007FED54 /* ChoreCell.xib */,
+				385DA0A319F1C9F2007FED54 /* BoolSettingCell.swift */,
+				385DA0A519F1CA00007FED54 /* BoolSettingCell.xib */,
+				381D8C8C19F33A16002F587F /* SegControlTableViewCell.swift */,
+				381D8C8A19F33980002F587F /* SegControlSettingCell.xib */,
+			);
+			name = TableCell;
+			sourceTree = "<group>";
+		};
 		385DA06C19F1A35D007FED54 /* SVG */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,10 +252,7 @@
 			children = (
 				3885867519CA9CBC00E79A17 /* Main.storyboard */,
 				3885867A19CA9CBC00E79A17 /* LaunchScreen.xib */,
-				385DA09B19F1B3A4007FED54 /* ChoreCell.swift */,
-				385DA09919F1B363007FED54 /* ChoreCell.xib */,
-				385DA0A319F1C9F2007FED54 /* SettingCell.swift */,
-				385DA0A519F1CA00007FED54 /* SettingCell.xib */,
+				381D8C8919F3393C002F587F /* TableCell */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -245,6 +263,8 @@
 				385DA09D19F1B852007FED54 /* UserViewController.swift */,
 				385DA0A119F1BEAC007FED54 /* UserSettingViewController.swift */,
 				385DA09F19F1B85F007FED54 /* ListViewController.swift */,
+				381D8C9019F346CA002F587F /* ListChoresViewController.swift */,
+				381D8C8E19F34478002F587F /* NewListViewController.swift */,
 				38A5FB1819CAA8D700FCB998 /* Framework Controllers */,
 			);
 			name = Controller;
@@ -378,6 +398,7 @@
 			files = (
 				385DA09019F1A35D007FED54 /* tick.svg in Resources */,
 				385DA08C19F1A35D007FED54 /* star.svg in Resources */,
+				381D8C8B19F33980002F587F /* SegControlSettingCell.xib in Resources */,
 				385DA08D19F1A35D007FED54 /* th-list-outline.svg in Resources */,
 				385DA09519F1A35D007FED54 /* user-delete-outline.svg in Resources */,
 				385DA09619F1A35D007FED54 /* user-delete.svg in Resources */,
@@ -398,7 +419,7 @@
 				385DA09719F1A35D007FED54 /* user-outline.svg in Resources */,
 				385DA08919F1A35D007FED54 /* plus-outline.svg in Resources */,
 				385DA09319F1A35D007FED54 /* user-add-outline.svg in Resources */,
-				385DA0A619F1CA00007FED54 /* SettingCell.xib in Resources */,
+				385DA0A619F1CA00007FED54 /* BoolSettingCell.xib in Resources */,
 				3885867C19CA9CBC00E79A17 /* LaunchScreen.xib in Resources */,
 				385DA08A19F1A35D007FED54 /* plus.svg in Resources */,
 				3885867919CA9CBC00E79A17 /* Images.xcassets in Resources */,
@@ -421,15 +442,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				38BFE66919CCD1C800E130D5 /* User.m in Sources */,
+				381D8C9119F346CA002F587F /* ListChoresViewController.swift in Sources */,
 				38BFE66619CCD1C700E130D5 /* Chore.m in Sources */,
 				385DA09E19F1B852007FED54 /* UserViewController.swift in Sources */,
+				381D8C8F19F34478002F587F /* NewListViewController.swift in Sources */,
 				38BFE67819CCD25C00E130D5 /* ChoreList+ChoreListCategory.m in Sources */,
 				38BFE66C19CCD1C800E130D5 /* ChoreList.m in Sources */,
 				38BFE66219CCC54800E130D5 /* DataController.swift in Sources */,
-				385DA0A419F1C9F2007FED54 /* SettingCell.swift in Sources */,
+				385DA0A419F1C9F2007FED54 /* BoolSettingCell.swift in Sources */,
 				385DA0A019F1B85F007FED54 /* ListViewController.swift in Sources */,
 				385DA09C19F1B3A4007FED54 /* ChoreCell.swift in Sources */,
 				38A5FB1A19CAA8E700FCB998 /* CalendarController.swift in Sources */,
+				381D8C8D19F33A16002F587F /* SegControlTableViewCell.swift in Sources */,
 				38BFE67419CCD24600E130D5 /* Chore+ChoreCategory.m in Sources */,
 				385DA0A219F1BEAC007FED54 /* UserSettingViewController.swift in Sources */,
 				38DD044219CBF73F00A0FE50 /* EventController.swift in Sources */,

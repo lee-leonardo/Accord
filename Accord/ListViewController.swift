@@ -6,6 +6,14 @@
 //  Copyright (c) 2014 Leonardo Lee. All rights reserved.
 //
 
+/*
+This presents a view that consolidates all the 
+
+Add —
+Settings —
+
+*/
+
 import UIKit
 
 class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -32,6 +40,12 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func setupListAlertController() -> UIAlertController {
         let setupController = UIAlertController(title: "List Actions", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        let newList = UIAlertAction(title: "New List", style: UIAlertActionStyle.Default) {
+            (action) -> Void in
+            println("New List")
+        }
+        setupController.addAction(newList)
         
         let settings = UIAlertAction(title: "Settings", style: UIAlertActionStyle.Default) {
             (action) -> Void in
@@ -62,11 +76,15 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {}
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
         
-        let addChore = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Add") { (action, indexPath) -> Void in
+        let addChore = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Add") {
+            (action, indexPath) -> Void in
+            println("Add Chore Button")
         }
         addChore.backgroundColor = UIColor(hue: 205/360, saturation: 0.60, brightness: 0.70, alpha: 0.8)
         
-        let settings = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Settings") { (action, indexPath) -> Void in
+        let settings = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Settings") {
+            (action, indexPath) -> Void in
+            println("List Settings Button")
         }
         settings.backgroundColor = UIColor(hue: 180/360, saturation: 0.40, brightness: 0.65, alpha: 0.8)
         
@@ -94,6 +112,11 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
