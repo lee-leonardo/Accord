@@ -14,25 +14,35 @@ class UserSettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "User Settings"
-        
+        self.prepareNavigation()
     }
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        NSNotificationCenter.defaultCenter().postNotificationName("USER_SETTINGS_CHANGED", object: nil, userInfo: settingsDict)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    //MARK:
+    //MARK: UINavigationItems
+    func prepareNavigation() {
+        self.title = "User Settings"
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelChanges:")
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: "confirmChanges:")
+        self.navigationItem.leftBarButtonItem = cancelButton
+        self.navigationItem.rightBarButtonItem = doneButton
+    }
+    
     func cancelChanges(sender : UIBarButtonItem) {
-        
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     func confirmChanges(sender : UIBarButtonItem) {
+        //This is when you batch the changes and then submit them to the notification.
         
+        self.dismissViewControllerAnimated(true, completion: {
+            () -> Void in
+            NSNotificationCenter.defaultCenter().postNotificationName("USER_SETTINGS_CHANGED", object: nil, userInfo: self.settingsDict)
+        })
     }
 
 }

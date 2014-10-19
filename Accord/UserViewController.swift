@@ -32,14 +32,6 @@ class UserViewController: UIViewController {
             let settingsView = self.storyboard?.instantiateViewControllerWithIdentifier("UserSettings") as UserSettingViewController
 //            settingsView.modalPresentationStyle = UIModalPresentationStyle.FormSheet
             
-            
-            let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelChanges:")
-            let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: "confirmChanges:")
-            
-            self.navigationController?.navigationItem.leftBarButtonItem = cancelButton
-            self.navigationController?.navigationItem.rightBarButtonItem = doneButton
-            
-            
             let settingsNav = UINavigationController(rootViewController: settingsView)
             settingsNav.modalPresentationStyle = UIModalPresentationStyle.FormSheet
             

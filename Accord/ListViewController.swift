@@ -64,13 +64,22 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let addChore = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Add") { (action, indexPath) -> Void in
         }
-        addChore.backgroundColor = UIColor(hue: 205/360, saturation: 0.50, brightness: 0.70, alpha: 0.8)
+        addChore.backgroundColor = UIColor(hue: 205/360, saturation: 0.60, brightness: 0.70, alpha: 0.8)
         
         let settings = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Settings") { (action, indexPath) -> Void in
         }
-        settings.backgroundColor = UIColor(hue: 180/360, saturation: 0.50, brightness: 0.65, alpha: 0.8)
+        settings.backgroundColor = UIColor(hue: 180/360, saturation: 0.40, brightness: 0.65, alpha: 0.8)
         
         return [addChore, settings]
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("Did Select Fired!")
+        
+        NSOperationQueue.mainQueue().addOperationWithBlock {
+            () -> Void in
+            self.listsTableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
     }
     
     //MARK: UITableViewDataSource
