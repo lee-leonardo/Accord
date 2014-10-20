@@ -6,6 +6,11 @@
 //  Copyright (c) 2014 Leonardo Lee. All rights reserved.
 //
 
+/*
+User VC primarily just displays the User's current information and such.
+This is the default screen on launch.
+*/
+
 import UIKit
 
 class UserViewController: UIViewController {
@@ -30,7 +35,6 @@ class UserViewController: UIViewController {
             (action) -> Void in
             
             let settingsView = self.storyboard?.instantiateViewControllerWithIdentifier("UserSettings") as UserSettingViewController
-//            settingsView.modalPresentationStyle = UIModalPresentationStyle.FormSheet
             
             let settingsNav = UINavigationController(rootViewController: settingsView)
             settingsNav.modalPresentationStyle = UIModalPresentationStyle.FormSheet

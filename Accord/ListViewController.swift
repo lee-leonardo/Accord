@@ -7,11 +7,7 @@
 //
 
 /*
-This presents a view that consolidates all the 
-
-Add —
-Settings —
-
+This view manages the Lists this user controls.
 */
 
 import UIKit
@@ -39,7 +35,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func setupListAlertController() -> UIAlertController {
-        let setupController = UIAlertController(title: "List Actions", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        let setupController = UIAlertController(title: "List Actions", message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
         
         let newList = UIAlertAction(title: "New List", style: UIAlertActionStyle.Default) {
             (action) -> Void in
@@ -47,7 +43,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         setupController.addAction(newList)
         
-        let settings = UIAlertAction(title: "Settings", style: UIAlertActionStyle.Default) {
+        let settings = UIAlertAction(title: "General Settings", style: UIAlertActionStyle.Default) {
             (action) -> Void in
         }
         setupController.addAction(settings)

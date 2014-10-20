@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38001BFE19F5765500D66A7A /* NewChoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38001BFD19F5765500D66A7A /* NewChoreViewController.swift */; };
+		38001C0019F590F300D66A7A /* NewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38001BFF19F590F300D66A7A /* NewListViewController.swift */; };
 		381D8C8B19F33980002F587F /* SegControlSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381D8C8A19F33980002F587F /* SegControlSettingCell.xib */; };
 		381D8C8D19F33A16002F587F /* SegControlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381D8C8C19F33A16002F587F /* SegControlTableViewCell.swift */; };
-		381D8C8F19F34478002F587F /* NewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381D8C8E19F34478002F587F /* NewListViewController.swift */; };
 		381D8C9119F346CA002F587F /* ListChoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381D8C9019F346CA002F587F /* ListChoresViewController.swift */; };
 		385DA08319F1A35D007FED54 /* flow-merge.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA06D19F1A35D007FED54 /* flow-merge.svg */; };
 		385DA08419F1A35D007FED54 /* flow-parallel.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA06E19F1A35D007FED54 /* flow-parallel.svg */; };
@@ -68,9 +69,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38001BFD19F5765500D66A7A /* NewChoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChoreViewController.swift; sourceTree = "<group>"; };
+		38001BFF19F590F300D66A7A /* NewListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewListViewController.swift; sourceTree = "<group>"; };
 		381D8C8A19F33980002F587F /* SegControlSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegControlSettingCell.xib; sourceTree = "<group>"; };
 		381D8C8C19F33A16002F587F /* SegControlTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegControlTableViewCell.swift; sourceTree = "<group>"; };
-		381D8C8E19F34478002F587F /* NewListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewListViewController.swift; sourceTree = "<group>"; };
 		381D8C9019F346CA002F587F /* ListChoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListChoresViewController.swift; sourceTree = "<group>"; };
 		385DA06D19F1A35D007FED54 /* flow-merge.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "flow-merge.svg"; sourceTree = "<group>"; };
 		385DA06E19F1A35D007FED54 /* flow-parallel.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "flow-parallel.svg"; sourceTree = "<group>"; };
@@ -263,8 +265,9 @@
 				385DA09D19F1B852007FED54 /* UserViewController.swift */,
 				385DA0A119F1BEAC007FED54 /* UserSettingViewController.swift */,
 				385DA09F19F1B85F007FED54 /* ListViewController.swift */,
+				38001BFF19F590F300D66A7A /* NewListViewController.swift */,
 				381D8C9019F346CA002F587F /* ListChoresViewController.swift */,
-				381D8C8E19F34478002F587F /* NewListViewController.swift */,
+				38001BFD19F5765500D66A7A /* NewChoreViewController.swift */,
 				38A5FB1819CAA8D700FCB998 /* Framework Controllers */,
 			);
 			name = Controller;
@@ -444,13 +447,14 @@
 				38BFE66919CCD1C800E130D5 /* User.m in Sources */,
 				381D8C9119F346CA002F587F /* ListChoresViewController.swift in Sources */,
 				38BFE66619CCD1C700E130D5 /* Chore.m in Sources */,
+				38001C0019F590F300D66A7A /* NewListViewController.swift in Sources */,
 				385DA09E19F1B852007FED54 /* UserViewController.swift in Sources */,
-				381D8C8F19F34478002F587F /* NewListViewController.swift in Sources */,
 				38BFE67819CCD25C00E130D5 /* ChoreList+ChoreListCategory.m in Sources */,
 				38BFE66C19CCD1C800E130D5 /* ChoreList.m in Sources */,
 				38BFE66219CCC54800E130D5 /* DataController.swift in Sources */,
 				385DA0A419F1C9F2007FED54 /* BoolSettingCell.swift in Sources */,
 				385DA0A019F1B85F007FED54 /* ListViewController.swift in Sources */,
+				38001BFE19F5765500D66A7A /* NewChoreViewController.swift in Sources */,
 				385DA09C19F1B3A4007FED54 /* ChoreCell.swift in Sources */,
 				38A5FB1A19CAA8E700FCB998 /* CalendarController.swift in Sources */,
 				381D8C8D19F33A16002F587F /* SegControlTableViewCell.swift in Sources */,
