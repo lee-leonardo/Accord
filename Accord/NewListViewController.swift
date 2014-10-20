@@ -12,6 +12,13 @@ class NewListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "New List"
+        
+        let cancel = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelNewList:")
+        let done = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: "finishNewList:")
+        
+        self.navigationItem.leftBarButtonItem = cancel
+        self.navigationItem.rightBarButtonItem = done
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -27,6 +34,7 @@ class NewListViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    /*
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
@@ -38,6 +46,7 @@ class NewListViewController: UITableViewController {
         // Return the number of rows in the section.
         return 0
     }
+    */
 
     /*
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
@@ -84,14 +93,21 @@ class NewListViewController: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+//MARK: - Target-Action
+    func cancelNewList(sender: UIBarButtonItem) {
+        self.dismissViewControllerAnimated(true, completion: {
+            () -> Void in
+        })
     }
-    */
+    
+    func finishNewList(sender: UIBarButtonItem) {
+        //Code
+        self.dismissViewControllerAnimated(true, completion: {
+            () -> Void in
+            //Done fired!
+            println("Done fired!")
 
+        })
+    }
+    
 }

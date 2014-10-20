@@ -40,6 +40,16 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         let newList = UIAlertAction(title: "New List", style: UIAlertActionStyle.Default) {
             (action) -> Void in
             println("New List")
+            
+            let newList = self.storyboard?.instantiateViewControllerWithIdentifier("NEW_LIST") as NewListViewController
+            
+            let newListNav = UINavigationController(rootViewController: newList)
+            newListNav.modalPresentationStyle = UIModalPresentationStyle.PageSheet
+            
+            self.presentViewController(newListNav, animated: true, completion: {
+                () -> Void in
+            })
+            
         }
         setupController.addAction(newList)
         

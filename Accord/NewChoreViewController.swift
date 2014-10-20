@@ -10,9 +10,16 @@ import UIKit
 
 class NewChoreViewController: UITableViewController {
 
+    //MARK: - View
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "New Chore"
+        
+        let cancel = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelNewChore:")
+        let done = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Done, target: self, action: "finishNewChore:")
+        
+        self.navigationItem.leftBarButtonItem = cancel
+        self.navigationItem.rightBarButtonItem = done
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -86,15 +93,21 @@ class NewChoreViewController: UITableViewController {
         return true
     }
     */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    
+//MARK: - Target-Action
+    func cancelNewChore(sender: UIBarButtonItem) {
+        self.dismissViewControllerAnimated(true, completion: {
+            () -> Void in
+            //
+        })
     }
-    */
+    
+    func finishNewChore(sender: UIBarButtonItem) {
+        //
+        self.dismissViewControllerAnimated(true, completion: {
+            () -> Void in
+            //
+        })
+    }
 
 }
