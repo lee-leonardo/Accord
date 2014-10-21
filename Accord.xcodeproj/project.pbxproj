@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		38001BFE19F5765500D66A7A /* NewChoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38001BFD19F5765500D66A7A /* NewChoreViewController.swift */; };
 		38001C0019F590F300D66A7A /* NewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38001BFF19F590F300D66A7A /* NewListViewController.swift */; };
-		381D8C8B19F33980002F587F /* SegControlSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 381D8C8A19F33980002F587F /* SegControlSettingCell.xib */; };
-		381D8C8D19F33A16002F587F /* SegControlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381D8C8C19F33A16002F587F /* SegControlTableViewCell.swift */; };
 		381D8C9119F346CA002F587F /* ListChoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381D8C9019F346CA002F587F /* ListChoresViewController.swift */; };
 		385DA08319F1A35D007FED54 /* flow-merge.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA06D19F1A35D007FED54 /* flow-merge.svg */; };
 		385DA08419F1A35D007FED54 /* flow-parallel.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA06E19F1A35D007FED54 /* flow-parallel.svg */; };
@@ -71,8 +69,6 @@
 /* Begin PBXFileReference section */
 		38001BFD19F5765500D66A7A /* NewChoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChoreViewController.swift; sourceTree = "<group>"; };
 		38001BFF19F590F300D66A7A /* NewListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewListViewController.swift; sourceTree = "<group>"; };
-		381D8C8A19F33980002F587F /* SegControlSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SegControlSettingCell.xib; sourceTree = "<group>"; };
-		381D8C8C19F33A16002F587F /* SegControlTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegControlTableViewCell.swift; sourceTree = "<group>"; };
 		381D8C9019F346CA002F587F /* ListChoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListChoresViewController.swift; sourceTree = "<group>"; };
 		385DA06D19F1A35D007FED54 /* flow-merge.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "flow-merge.svg"; sourceTree = "<group>"; };
 		385DA06E19F1A35D007FED54 /* flow-parallel.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "flow-parallel.svg"; sourceTree = "<group>"; };
@@ -156,8 +152,6 @@
 				385DA09919F1B363007FED54 /* ChoreCell.xib */,
 				385DA0A319F1C9F2007FED54 /* BoolSettingCell.swift */,
 				385DA0A519F1CA00007FED54 /* BoolSettingCell.xib */,
-				381D8C8C19F33A16002F587F /* SegControlTableViewCell.swift */,
-				381D8C8A19F33980002F587F /* SegControlSettingCell.xib */,
 			);
 			name = TableCell;
 			sourceTree = "<group>";
@@ -401,7 +395,6 @@
 			files = (
 				385DA09019F1A35D007FED54 /* tick.svg in Resources */,
 				385DA08C19F1A35D007FED54 /* star.svg in Resources */,
-				381D8C8B19F33980002F587F /* SegControlSettingCell.xib in Resources */,
 				385DA08D19F1A35D007FED54 /* th-list-outline.svg in Resources */,
 				385DA09519F1A35D007FED54 /* user-delete-outline.svg in Resources */,
 				385DA09619F1A35D007FED54 /* user-delete.svg in Resources */,
@@ -457,7 +450,6 @@
 				38001BFE19F5765500D66A7A /* NewChoreViewController.swift in Sources */,
 				385DA09C19F1B3A4007FED54 /* ChoreCell.swift in Sources */,
 				38A5FB1A19CAA8E700FCB998 /* CalendarController.swift in Sources */,
-				381D8C8D19F33A16002F587F /* SegControlTableViewCell.swift in Sources */,
 				38BFE67419CCD24600E130D5 /* Chore+ChoreCategory.m in Sources */,
 				385DA0A219F1BEAC007FED54 /* UserSettingViewController.swift in Sources */,
 				38DD044219CBF73F00A0FE50 /* EventController.swift in Sources */,

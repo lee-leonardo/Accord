@@ -9,8 +9,11 @@
 import UIKit
 
 class NewChoreViewController: UITableViewController {
-
-    //MARK: - View
+    
+    @IBOutlet weak var choreName: UITextField!
+    @IBOutlet weak var choreDescription: UITextField!
+    
+//MARK: - View
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "New Chore"
@@ -32,8 +35,11 @@ class NewChoreViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+//MARK: -
 
-    // MARK: - Table view data source
+//MARK: - Delegate
+    // MARK: Table view data source
 
     /*
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

@@ -69,7 +69,7 @@
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Wa9-s5-LxV">
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wa9-s5-LxV" id="lWx-8i-L9P">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="Wa9-s5-LxV" id="lWx-8i-L9P">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="List Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dd2-f0-p96">
@@ -155,10 +155,13 @@
                             <outlet property="delegate" destination="aLb-eY-Dn0" id="9AX-pz-ztE"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="listName" destination="Dd2-f0-p96" id="aNS-c1-I7G"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c7k-JL-ktF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-272" y="2196"/>
+            <point key="canvasLocation" x="1906" y="-186"/>
         </scene>
         <!--New Chore View Controller-->
         <scene sceneID="Fee-Pa-KGI">
@@ -253,10 +256,14 @@
                             <outlet property="delegate" destination="y4p-M8-XZJ" id="gM9-t3-cu2"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="choreDescription" destination="0Ve-4c-Avf" id="Rw8-V1-8ec"/>
+                        <outlet property="choreName" destination="5v2-uc-5Jy" id="6Rj-hX-aYE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vPc-Z5-9pA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="426" y="2196"/>
+            <point key="canvasLocation" x="1906" y="1430"/>
         </scene>
         <!--List-->
         <scene sceneID="WHf-np-qQB">

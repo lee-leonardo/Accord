@@ -9,6 +9,10 @@
 import UIKit
 
 class NewListViewController: UITableViewController {
+    
+    @IBOutlet weak var listName: UITextField!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +35,11 @@ class NewListViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //MARK:
 
-    // MARK: - Table view data source
+    //MARK: - Delegation
+    // MARK: UITableViewDatasource
 
     /*
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -55,50 +62,38 @@ class NewListViewController: UITableViewController {
         }
     }
     */
-    /*
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
-
-        // Configure the cell...
-
-        return cell
+    
+    //MARK: UITableViewDelegate
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
+    
+    
+//MARK: - IBACTION
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {}
+    override func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [AnyObject]? {
+        
+        //let add = UITableViewRowAction(style: UITableViewRowActionStyle.Normal, title: "Add") { (action, indexPath) -> Void in}
+        //add.backgroundColor = UIColor(hue: 180/360, saturation: 0.65, brightness: 0.75, alpha: 1.0)
+        
+        let clear = UITableViewRowAction(style: UITableViewRowActionStyle.Default, title: "Clear") { (action, indexPath) -> Void in}
+        clear.backgroundColor = UIColor.redColor()
+        
+        switch indexPath.section {
+        case 0:
+            switch indexPath.row {
+            case 1:
+                return [clear]
+            default:
+                return nil
+            }
+        case 1:
+            return [clear]
+            
+        default:
+            return nil
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView!, moveRowAtIndexPath fromIndexPath: NSIndexPath!, toIndexPath: NSIndexPath!) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView!, canMoveRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
 //MARK: - Target-Action
     func cancelNewList(sender: UIBarButtonItem) {
