@@ -10,6 +10,7 @@
 		38001BFE19F5765500D66A7A /* NewChoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38001BFD19F5765500D66A7A /* NewChoreViewController.swift */; };
 		38001C0019F590F300D66A7A /* NewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38001BFF19F590F300D66A7A /* NewListViewController.swift */; };
 		381D8C9119F346CA002F587F /* ListChoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381D8C9019F346CA002F587F /* ListChoresViewController.swift */; };
+		385A3E9A1A05EA220059C67E /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385A3E991A05EA220059C67E /* MessageController.swift */; };
 		385DA08319F1A35D007FED54 /* flow-merge.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA06D19F1A35D007FED54 /* flow-merge.svg */; };
 		385DA08419F1A35D007FED54 /* flow-parallel.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA06E19F1A35D007FED54 /* flow-parallel.svg */; };
 		385DA08519F1A35D007FED54 /* flow-switch.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA06F19F1A35D007FED54 /* flow-switch.svg */; };
@@ -70,6 +71,7 @@
 		38001BFD19F5765500D66A7A /* NewChoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChoreViewController.swift; sourceTree = "<group>"; };
 		38001BFF19F590F300D66A7A /* NewListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewListViewController.swift; sourceTree = "<group>"; };
 		381D8C9019F346CA002F587F /* ListChoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListChoresViewController.swift; sourceTree = "<group>"; };
+		385A3E991A05EA220059C67E /* MessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 		385DA06D19F1A35D007FED54 /* flow-merge.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "flow-merge.svg"; sourceTree = "<group>"; };
 		385DA06E19F1A35D007FED54 /* flow-parallel.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "flow-parallel.svg"; sourceTree = "<group>"; };
 		385DA06F19F1A35D007FED54 /* flow-switch.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "flow-switch.svg"; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 				38DD044119CBF73F00A0FE50 /* EventController.swift */,
 				38A5FB1919CAA8E700FCB998 /* CalendarController.swift */,
 				38BFE66119CCC54800E130D5 /* DataController.swift */,
+				385A3E991A05EA220059C67E /* MessageController.swift */,
 			);
 			name = "Framework Controllers";
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				TargetAttributes = {
 					3885866819CA9CBC00E79A17 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = KT656SWTSZ;
 					};
 					3885868019CA9CBC00E79A17 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -444,6 +448,7 @@
 				385DA09E19F1B852007FED54 /* UserViewController.swift in Sources */,
 				38BFE67819CCD25C00E130D5 /* ChoreList+ChoreListCategory.m in Sources */,
 				38BFE66C19CCD1C800E130D5 /* ChoreList.m in Sources */,
+				385A3E9A1A05EA220059C67E /* MessageController.swift in Sources */,
 				38BFE66219CCC54800E130D5 /* DataController.swift in Sources */,
 				385DA0A419F1C9F2007FED54 /* BoolSettingCell.swift in Sources */,
 				385DA0A019F1B85F007FED54 /* ListViewController.swift in Sources */,
@@ -581,6 +586,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Accord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -594,6 +600,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Accord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
