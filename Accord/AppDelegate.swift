@@ -15,9 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var calendarController : CalendarController?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+//        NSNotificationCenter.defaultCenter().addObserverForName("ADD_CAL_ITEM", object: self.calendarController, queue: <#NSOperationQueue?#>) {
+//            (note) -> Void in
+//            //
+//        }
+        
+        
+        
         return true
     }
 

@@ -12,7 +12,8 @@ import EventKit
 class CalendarController {
     
     var eventStore : EKEventStore
-    var calendar : EKCalendar?
+    var eventCal : EKCalendar?
+    var reminderCal : EKCalendar?
     
     class func instance() {
 //        var calendar
@@ -29,7 +30,7 @@ class CalendarController {
                 println("\(error.localizedDescription)")
             } else {
                 if let calID = NSUserDefaults.standardUserDefaults().objectForKey("CalendarIdentifier") as? String {
-                    self.calendar = self.eventStore.calendarWithIdentifier(calID) ?? self.eventStore.defaultCalendarForNewEvents
+                    self.eventCal = self.eventStore.calendarWithIdentifier(calID) ?? self.eventStore.defaultCalendarForNewEvents
                 } else {
                     self.generateCalendar()
                 }
@@ -41,11 +42,11 @@ class CalendarController {
     
     //MARK: - Calendar
     func generateCalendar() {
-        self.calendar = EKCalendar(forEntityType: EKEntityTypeEvent, eventStore: self.eventStore)
-        NSUserDefaults.standardUserDefaults().setObject(self.calendar!.calendarIdentifier, forKey: "CalendarIdentifier")
+        self.eventCal = EKCalendar(forEntityType: EKEntityTypeEvent, eventStore: self.eventStore)
+        NSUserDefaults.standardUserDefaults().setObject(self.eventCal!.calendarIdentifier, forKey: "CalendarIdentifier")
         //This is also where I'll save it to Core Data.
         
-        self.calendar!.title = "Accord Schedule"
+        self.eventCal!.title = "Accord Schedule"
         //self.calendar!.source =
         
     }
@@ -54,7 +55,7 @@ class CalendarController {
         var error : NSError?
         
         //Batch is preferred... so I'll be tailoring to that in a moment.
-        self.eventStore.saveCalendar(self.calendar, commit: true, error: &error)
+        self.eventStore.saveCalendar(self.eventCal, commit: true, error: &error)
         
         if error != nil {
             println("\(error?.localizedDescription)")
@@ -63,12 +64,48 @@ class CalendarController {
     }
     
     //MARK: - Events
-    func createEvent() {
+    
+    //Make this take in a EKCalendarItem, EKAlarm, EKRecurrenceRule
+    //EKStructuredLocation
+    func createChoreItems(item: EKCalendarItem, alarm: EKAlarm?, recurrenceRule rule:EKRecurrenceRule?) {
         var event = EKEvent(eventStore: self.eventStore)
         //event.eventIdentifier //Gotta save this.
         
+        event.addAlarm(alarm)
+        event.addRecurrenceRule(rule)
+        
+        
+        
     }
     
+    
+    //MARK: Calendar Item
+    func createCalendarItem(name title: String, startDate: NSDate?, deadline endDate: NSDate?) -> EKCalendarItem {
+        
+        var item = EKCalendarItem()
+        item.title = title
+        
+        return item
+    }
+    
+    //MARK: Alarm Item
+    func createAlarm() -> EKAlarm {
+        var alarm = EKAlarm()
+        
+        
+        return alarm
+        
+    }
+    
+    
+    //MARK: - Setup
+    func setupAccord() {
+        //In here I'll do the first time setup for Accord. Meaning the setup of the two calendar items that will be used for the Calendar and the Reminder apps respectively.
+    }
+    
+    
+    
+//—————————————————————————————————————————————————————
     //I do not know if this is a feature I'd like yet, but it is nice to experiment with atm.
     //MARK: Reminders?
     func createRemindersForToday() {
