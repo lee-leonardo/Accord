@@ -13,7 +13,7 @@ class CalendarController {
     
     var eventStore : EKEventStore
     var eventCal : EKCalendar?
-    var reminderCal : EKCalendar?
+    var reminderCal : EKReminder?
     
     class func instance() {
 //        var calendar
@@ -32,7 +32,7 @@ class CalendarController {
                 if let calID = NSUserDefaults.standardUserDefaults().objectForKey("CalendarIdentifier") as? String {
                     self.eventCal = self.eventStore.calendarWithIdentifier(calID) ?? self.eventStore.defaultCalendarForNewEvents
                 } else {
-                    self.generateCalendar()
+                    self.generateCalendars()
                 }
             }
         }
@@ -41,14 +41,13 @@ class CalendarController {
     //TODO: Check for Updates to the Calendar, Add new reminders, notify user
     
     //MARK: - Calendar
-    func generateCalendar() {
+    func generateCalendars() {
         self.eventCal = EKCalendar(forEntityType: EKEntityTypeEvent, eventStore: self.eventStore)
-        NSUserDefaults.standardUserDefaults().setObject(self.eventCal!.calendarIdentifier, forKey: "CalendarIdentifier")
+        NSUserDefaults.standardUserDefaults().setObject(self.eventCal!.calendarIdentifier, forKey: "EVENT_CAL_ID")
         //This is also where I'll save it to Core Data.
         
         self.eventCal!.title = "Accord Schedule"
-        //self.calendar!.source =
-        
+//        self.eventCal!.source
     }
     
     func updateCalendars() {
@@ -94,6 +93,14 @@ class CalendarController {
         
         
         return alarm
+        
+    }
+    
+    //MARK: ToDo
+    func createToDo() {
+        
+        //Need to work on this one.
+        self.reminderCal = EKReminder(eventStore: self.eventStore)
         
     }
     
