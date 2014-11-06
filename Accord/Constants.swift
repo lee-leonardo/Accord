@@ -8,7 +8,8 @@
 
 import Foundation
 
-let EK_AUTH = "EK_AUTH_STATUS"
+let EK_AUTH_POST = "EK_AUTH_STATUS"
+let EK_EVENT_ID = "EVENT_CAL_ID"
 
 //I am hoping not to use this.
-let CALDAV_ICLOUD = "iCloud"
+let CAL_ICLOUD = "iCloud"

@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        NSNotificationCenter.defaultCenter().addObserverForName(EK_AUTH, object: self, queue: calQueue) {
+        NSNotificationCenter.defaultCenter().addObserverForName(EK_AUTH_POST, object: self, queue: calQueue) {
             (note) -> Void in
             //
         }
@@ -43,7 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: EK_AUTH, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: EK_AUTH_POST, object: nil)
         NSNotificationCenter.defaultCenter().removeObserver(self, name: EKEventStoreChangedNotification, object: nil)
         
         
@@ -78,7 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: EK_AUTH, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: EK_AUTH_POST, object: nil)
         NSNotificationCenter.defaultCenter().removeObserver(self, name: EKEventStoreChangedNotification, object: nil)
         
         

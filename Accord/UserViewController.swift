@@ -37,23 +37,26 @@ class UserViewController: UIViewController {
         let app = UIApplication.sharedApplication().delegate as AppDelegate
         app.calendarController.checkEKAuthorizationStatus({
             (authorized, description) -> Void in
-            if !authorized {
-                let alert = UIAlertController(title: "App Requires Calendar Permission", message: description, preferredStyle: UIAlertControllerStyle.Alert)
-                
-                let okay = UIAlertAction(title: "To Settings?", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-                    //
+            
+            if authorized != nil {
+                if !authorized! {
+                    let alert = UIAlertController(title: "App Requires Calendar Permission", message: description, preferredStyle: UIAlertControllerStyle.Alert)
+                    
+                    let okay = UIAlertAction(title: "To Settings?", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+                        //
+                        
+                        
+                    })
+                    let cancel = UIAlertAction(title: "Ignore", style: UIAlertActionStyle.Cancel, handler: nil)
+                    
+                    alert.addAction(okay)
+                    alert.addAction(cancel)
+                    
+                    self.presentViewController(alert, animated: true, completion: nil)
+                } else {
                     
                     
-                })
-                let cancel = UIAlertAction(title: "Ignore", style: UIAlertActionStyle.Cancel, handler: nil)
-                
-                alert.addAction(okay)
-                alert.addAction(cancel)
-                
-                self.presentViewController(alert, animated: true, completion: nil)
-            } else {
-                
-                
+                }
             }
         })
     }
