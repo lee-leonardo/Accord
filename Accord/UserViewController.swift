@@ -27,26 +27,35 @@ class UserViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        let app = UIApplication.sharedApplication().delegate as AppDelegate
+        if !NSUserDefaults.standardUserDefaults().boolForKey("PREPPED") {
+            let alert = UIAlertController(title: "Permissions will be Requested", message: "This app requires permissions to the ", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+            
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "PREPPED")
+        }
         
-        app.calendarController?.checkEKAuthorizationStatus({
+        let app = UIApplication.sharedApplication().delegate as AppDelegate
+        app.calendarController.checkEKAuthorizationStatus({
             (authorized, description) -> Void in
             if !authorized {
-                let alert = UIAlertController(title: "Error with Calendar", message: description, preferredStyle: UIAlertControllerStyle.Alert)
+                let alert = UIAlertController(title: "App Requires Calendar Permission", message: description, preferredStyle: UIAlertControllerStyle.Alert)
                 
-                let okay = UIAlertAction(title: "To Settings", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+                let okay = UIAlertAction(title: "To Settings?", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
                     //
+                    
+                    
                 })
                 let cancel = UIAlertAction(title: "Ignore", style: UIAlertActionStyle.Cancel, handler: nil)
                 
+                alert.addAction(okay)
+                alert.addAction(cancel)
+                
+                self.presentViewController(alert, animated: true, completion: nil)
             } else {
+                
                 
             }
         })
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     func setupUserAlertController() -> UIAlertController {

@@ -61,6 +61,7 @@
 		38BFE67419CCD24600E130D5 /* Chore+ChoreCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BFE67319CCD24600E130D5 /* Chore+ChoreCategory.m */; };
 		38BFE67819CCD25C00E130D5 /* ChoreList+ChoreListCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BFE67719CCD25C00E130D5 /* ChoreList+ChoreListCategory.m */; };
 		38DD044219CBF73F00A0FE50 /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD044119CBF73F00A0FE50 /* EventController.swift */; };
+		38F7C1711A0B410D00A01E65 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7C1701A0B410D00A01E65 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,7 @@
 		38BFE67619CCD25C00E130D5 /* ChoreList+ChoreListCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChoreList+ChoreListCategory.h"; sourceTree = "<group>"; };
 		38BFE67719CCD25C00E130D5 /* ChoreList+ChoreListCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChoreList+ChoreListCategory.m"; sourceTree = "<group>"; };
 		38DD044119CBF73F00A0FE50 /* EventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventController.swift; sourceTree = "<group>"; };
+		38F7C1701A0B410D00A01E65 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 		3885866B19CA9CBC00E79A17 /* Accord */ = {
 			isa = PBXGroup;
 			children = (
+				38F7C1701A0B410D00A01E65 /* Constants.swift */,
 				3885866E19CA9CBC00E79A17 /* AppDelegate.swift */,
 				38BFE66319CCD1C700E130D5 /* Accord-Bridging-Header.h */,
 				3885869319CA9CD400E79A17 /* Model */,
@@ -465,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38BFE66919CCD1C800E130D5 /* User.m in Sources */,
+				38F7C1711A0B410D00A01E65 /* Constants.swift in Sources */,
 				381D8C9119F346CA002F587F /* ListChoresViewController.swift in Sources */,
 				38BFE66619CCD1C700E130D5 /* Chore.m in Sources */,
 				38001C0019F590F300D66A7A /* NewListViewController.swift in Sources */,

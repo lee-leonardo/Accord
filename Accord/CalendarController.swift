@@ -14,16 +14,14 @@ class CalendarController {
     var eventStore : EKEventStore
     var eventCal : EKCalendar?
     var reminderCal : EKReminder?
-//    var iCloudSource : EKSource
     
+    //If I want to do the singleton version.
     class func instance() {
-//        var calendar
     }
     
     init() {
         //Persists, create an EKEventStore once for a long time.
-        //Stores hold calendars which hold events and reminders.
-
+        //Stores hold calendars which hold events.
         self.eventStore = EKEventStore()
     }
     
@@ -35,9 +33,7 @@ class CalendarController {
         
         
         self.eventCal!.title = "Accord Chores"
-        //        self.eventCal!.source
-        
-        
+//        self.eventCal!.source
         
         //Apparently the way to build an iCloud calendar.
         for source in eventStore.sources() {

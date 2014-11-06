@@ -8,24 +8,28 @@
 
 import UIKit
 import CoreData
+import EventKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var calendarController : CalendarController?
+    var calendarController = CalendarController()
+    var calQueue = NSOperationQueue()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        self.calendarController = CalendarController()
+        NSNotificationCenter.defaultCenter().addObserverForName(EK_AUTH, object: self, queue: calQueue) {
+            (note) -> Void in
+            //
+        }
         
         //This is for the controller that houses the EKEventStoreController.
-        //        NSNotificationCenter.defaultCenter().addObserverForName(EKEventStoreChangedNotification, object: self, queue: <#NSOperationQueue?#>) {
-        //            (note) -> Void in
-        //            <#code#>
-        //        }
-        
+        NSNotificationCenter.defaultCenter().addObserverForName(EKEventStoreChangedNotification, object: self, queue: calQueue) {
+            (note) -> Void in
+            //
+        }
         
         return true
     }
@@ -39,26 +43,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
         
-        if calendarController != nil {
-            var calendarSave = application.beginBackgroundTaskWithExpirationHandler {
-                () -> Void in
-                
-                var error : NSError?
-                self.calendarController?.eventStore.commit(&error)
-                
-                if error != nil {
-                    println("\(error?.localizedDescription)")
-                    //Send a message to crash/problem reporter stuff I'll implement later.
-                }
-                
-            }
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: EK_AUTH, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: EKEventStoreChangedNotification, object: nil)
+        
+        
+        var calendarSave = application.beginBackgroundTaskWithExpirationHandler {
+            () -> Void in
             
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
-                () -> Void in
-                application.endBackgroundTask(calendarSave)
-                calendarSave = UIBackgroundTaskInvalid
-            })
+            var error : NSError?
+            self.calendarController.eventStore.commit(&error)
+            
+            if error != nil {
+                println("\(error?.localizedDescription)")
+                //Send a message to crash/problem reporter stuff I'll implement later.
+            }
         }
+            
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
+            () -> Void in
+            application.endBackgroundTask(calendarSave)
+            calendarSave = UIBackgroundTaskInvalid
+        })
         
     }
 
@@ -72,6 +77,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: EK_AUTH, object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: EKEventStoreChangedNotification, object: nil)
+        
+        
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
