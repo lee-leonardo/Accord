@@ -14,6 +14,7 @@ class CalendarController {
     var eventStore : EKEventStore
     var eventCal : EKCalendar?
     var reminderCal : EKReminder?
+//    var iCloudSource : EKSource
     
     class func instance() {
 //        var calendar
@@ -24,21 +25,7 @@ class CalendarController {
         //Stores hold calendars which hold events and reminders.
 
         self.eventStore = EKEventStore()
-        self.eventStore.requestAccessToEntityType(EKEntityTypeEvent) {
-            (granted, error) -> Void in
-            if !granted {
-                println("\(error.localizedDescription)")
-            } else {
-                if let calID = NSUserDefaults.standardUserDefaults().objectForKey("CalendarIdentifier") as? String {
-                    self.eventCal = self.eventStore.calendarWithIdentifier(calID) ?? self.eventStore.defaultCalendarForNewEvents
-                } else {
-                    self.generateCalendars()
-                }
-            }
-        }
     }
-    
-    //TODO: Check for Updates to the Calendar, Add new reminders, notify user
     
     //MARK: - Calendar
     func generateCalendars() {
@@ -46,8 +33,21 @@ class CalendarController {
         NSUserDefaults.standardUserDefaults().setObject(self.eventCal!.calendarIdentifier, forKey: "EVENT_CAL_ID")
         //This is also where I'll save it to Core Data.
         
-        self.eventCal!.title = "Accord Schedule"
-//        self.eventCal!.source
+        
+        self.eventCal!.title = "Accord Chores"
+        //        self.eventCal!.source
+        
+        
+        
+        //Apparently the way to build an iCloud calendar.
+        for source in eventStore.sources() {
+            if let getCalDAV = source as? EKSource {
+                if getCalDAV.sourceType.value == EKSourceTypeCalDAV.value && getCalDAV.title == "iCloud" {
+                    eventCal!.source = getCalDAV
+                    break;
+                }
+            }
+        }
     }
     
     func updateCalendars() {
@@ -73,8 +73,6 @@ class CalendarController {
         event.addAlarm(alarm)
         event.addRecurrenceRule(rule)
         
-        
-        
     }
     
     
@@ -84,19 +82,37 @@ class CalendarController {
         var item = EKCalendarItem()
         item.title = title
         
+//        item.location
+//        item.creationDate
+//        item.lastModifiedDate
+//        item.url
+        
+//        item.calendarItemIdentifier
+//        item.calendarItemExternalIdentifier
+//        item.calendar
+        
         return item
     }
     
     //MARK: Alarm Item
     func createAlarm() -> EKAlarm {
         var alarm = EKAlarm()
-        
+//        alarm.absoluteDate
+//        alarm.relativeOffset
+//        alarm.structuredLocation
+//        alarm.proximity
         
         return alarm
         
     }
     
-    //MARK: ToDo
+    func createRecurrenceRule() -> EKRecurrenceRule {
+        var rule = EKRecurrenceRule()
+        
+        return rule
+    }
+    
+    //MARK: ToDo (Reminders)
     func createToDo() {
         
         //Need to work on this one.
@@ -111,8 +127,47 @@ class CalendarController {
     }
     
     
+    //MARK: EKAuthorization
+    func requestAccess() {
+        self.eventStore.requestAccessToEntityType(EKEntityTypeEvent) {
+            (granted, error) -> Void in
+            if !granted {
+                println("\(error?.localizedDescription)")
+            } else {
+                if let calID = NSUserDefaults.standardUserDefaults().objectForKey("CALENDAR_ID") as? String {
+                    self.eventCal = self.eventStore.calendarWithIdentifier(calID) ?? self.eventStore.defaultCalendarForNewEvents
+                } else {
+                    self.generateCalendars()
+                }
+            }
+        }
+        //Post an authorization status notification?
+    }
     
-//—————————————————————————————————————————————————————
+    func checkEKAuthorizationStatus(callback: (authorized: Bool, description: String?) -> Void) {
+        let status = EKEventStore.authorizationStatusForEntityType(EKEntityTypeEvent)
+        
+        switch status {
+        case EKAuthorizationStatus.Authorized:
+            callback(authorized: true, description: nil)
+            
+        case EKAuthorizationStatus.Denied, EKAuthorizationStatus.Restricted:
+            callback(authorized: false, description: "Authorization to the Calendar is denied or restricted.")
+            
+        case EKAuthorizationStatus.NotDetermined:
+            self.requestAccess()
+            
+            
+            //Recursive... since the authorization status check is async, I'll need to have a listener to really handle this.
+            self.checkEKAuthorizationStatus({
+                (authorized, description) -> Void in
+                callback(authorized: authorized, description: description)
+            })
+        }
+    }
+    
+    
+//——————————————————————
     //I do not know if this is a feature I'd like yet, but it is nice to experiment with atm.
     //MARK: Reminders?
     func createRemindersForToday() {
@@ -125,12 +180,5 @@ class CalendarController {
         var dueComponents = reminder.dueDateComponents
         
     }
+//——————————————————————
 }
-
-
-
-//This is for the controller that houses the EKEventStoreController.
-//        NSNotificationCenter.defaultCenter().addObserverForName(EKEventStoreChangedNotification, object: self, queue: <#NSOperationQueue?#>) {
-//            (note) -> Void in
-//            <#code#>
-//        }

@@ -23,6 +23,27 @@ class UserViewController: UIViewController {
         self.userAlertController = setupUserAlertController()
 
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let app = UIApplication.sharedApplication().delegate as AppDelegate
+        
+        app.calendarController?.checkEKAuthorizationStatus({
+            (authorized, description) -> Void in
+            if !authorized {
+                let alert = UIAlertController(title: "Error with Calendar", message: description, preferredStyle: UIAlertControllerStyle.Alert)
+                
+                let okay = UIAlertAction(title: "To Settings", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+                    //
+                })
+                let cancel = UIAlertAction(title: "Ignore", style: UIAlertActionStyle.Cancel, handler: nil)
+                
+            } else {
+                
+            }
+        })
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

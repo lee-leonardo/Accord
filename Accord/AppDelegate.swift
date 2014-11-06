@@ -18,12 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
+        self.calendarController = CalendarController()
         
-//        NSNotificationCenter.defaultCenter().addObserverForName("ADD_CAL_ITEM", object: self.calendarController, queue: <#NSOperationQueue?#>) {
-//            (note) -> Void in
-//            //
-//        }
-        
+        //This is for the controller that houses the EKEventStoreController.
+        //        NSNotificationCenter.defaultCenter().addObserverForName(EKEventStoreChangedNotification, object: self, queue: <#NSOperationQueue?#>) {
+        //            (note) -> Void in
+        //            <#code#>
+        //        }
         
         
         return true
