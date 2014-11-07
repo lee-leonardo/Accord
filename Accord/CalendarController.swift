@@ -36,8 +36,7 @@ class CalendarController {
         }
     }
     
-    //MARK: - Events
-    
+//MARK: - Events
     //Make this take in a EKCalendarItem, EKAlarm, EKRecurrenceRule
     //EKStructuredLocation
     func createChoreItems(item: EKCalendarItem, alarm: EKAlarm?, recurrenceRule rule:EKRecurrenceRule?) {
@@ -49,8 +48,6 @@ class CalendarController {
         
     }
     
-    
-    //MARK: Calendar Item
     func createCalendarItem(name title: String, startDate: NSDate?, deadline endDate: NSDate?) -> EKCalendarItem {
         
         var item = EKCalendarItem()
@@ -84,35 +81,23 @@ class CalendarController {
         return rule
     }
     
-    //MARK: - Setup
+//MARK: - Setup
     func setupAccord() {
         //In here I'll do the first time setup for Accord. Meaning the setup of the two calendar items that will be used for the Calendar and the Reminder apps respectively.
     }
     
-    //MARK: - Calendar
-    func generateCalendars() {
+//MARK: - Calendar
+    func createCalendar() {
         self.eventCal = EKCalendar(forEntityType: EKEntityTypeEvent, eventStore: self.eventStore)
         NSUserDefaults.standardUserDefaults().setObject(self.eventCal!.calendarIdentifier, forKey: EK_EVENT_ID)
         //This is also where I'll save it to Core Data.
         
+        
+        //TODO: Use this
+        NSNotificationCenter.defaultCenter().postNotificationName(CD_NEW_CAL, object: self, userInfo: ["ID":self.eventCal!.calendarIdentifier])
+        
         self.eventCal!.title = "Accord Chores"
-        
-        //Retrieves default, or the iCloud is set up the default on iCloud. However this isn't the same as creating a calendar...
-        //self.eventCal!.source = eventStore.defaultCalendarForNewEvents.source
-        
-        //Apparently the way to build an iCloud calendar.
-        for source in eventStore.sources() {
-            println(source)
-            
-            if let getCalDAV = source as? EKSource {
-                
-                //This is a way to get iCloud, but it doesn't work if the default settings a modified or if iCloud isn't set up.
-                if getCalDAV.sourceType.value == EKSourceTypeCalDAV.value && getCalDAV.title == "iCloud" {
-                    eventCal!.source = getCalDAV
-                    break
-                }
-            }
-        }
+        self.eventCal!.source = eventStore.defaultCalendarForNewEvents.source
     }
     
     //Update
@@ -120,7 +105,7 @@ class CalendarController {
         
     }
     
-    //MARK: - EKAuthorization
+//MARK: - EKAuthorization
     func checkEventStoreAccessForCalendar() {
         var status = EKEventStore.authorizationStatusForEntityType(EKEntityTypeEvent)
         switch status {
@@ -147,14 +132,14 @@ class CalendarController {
     }
     
     func accessGrantedForCalendar() {
-        if let calID = NSUserDefaults.standardUserDefaults().objectForKey(EK_EVENT_ID) as? String {
+        if let calID = NSUserDefaults.standardUserDefaults().stringForKey(EK_EVENT_ID)? {
             self.eventCal = self.eventStore.calendarWithIdentifier(calID) ?? self.eventStore.defaultCalendarForNewEvents
         } else {
-            self.generateCalendars()
+            self.createCalendar()
         }
     }
     
-    //MARK: -
+//MARK: -
 //——————————————————————
     //I do not know if this is a feature I'd like yet, but it is nice to experiment with atm.
     //MARK: Reminders?
@@ -169,7 +154,7 @@ class CalendarController {
         
     }
     
-    //MARK: ToDo (Reminders) --Do not focus on atm.
+//TODO: (Reminders) --Do not focus on atm.
     func createToDo() {
         
         //Need to work on this one.

@@ -23,8 +23,9 @@ class DataController {
             var users = self.dataContext.executeFetchRequest(request, error: &error)
             
             if error != nil {
-                
+                println("\(error?.localizedDescription)")
             } else {
+                
             }
             
         } else {

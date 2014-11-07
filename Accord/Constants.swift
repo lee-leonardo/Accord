@@ -13,6 +13,8 @@ let EK_AUTH_FAIL = "EK_AUTH_FAILURE"
 let EK_AUTH_CHANGE = "EK_AUTH_CHANGED"
 let EK_EVENT_ID = "EVENT_CAL_ID"
 
+let CD_NEW_CAL = "NEW_CALENDAR_NOTE"
+
 //I am hoping not to use this.
 let CAL_ICLOUD = "iCloud"
 
