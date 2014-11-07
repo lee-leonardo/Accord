@@ -27,40 +27,42 @@ class UserViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        if !NSUserDefaults.standardUserDefaults().boolForKey("PREPPED") {
-            let alert = UIAlertController(title: "Permissions will be Requested", message: "This app requires permissions to the ", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+//        if !NSUserDefaults.standardUserDefaults().boolForKey("PREPPED") {
+//            let alert = UIAlertController(title: "Permissions will be Requested", message: "This app requires permissions to the ", preferredStyle: UIAlertControllerStyle.Alert)
+//            alert.addAction(UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: nil))
+//            
+//            self.presentViewController(alert, animated: true, completion: nil)
+//            
+//            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "PREPPED")
+//        }
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(EK_AUTH_FAIL, object: self, queue: NSOperationQueue.mainQueue()) { (note) -> Void in
+            let alert = UIAlertController(title: "App Requires Permission", message: "This app requires calendar permissions to function.", preferredStyle: UIAlertControllerStyle.Alert)
             
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "PREPPED")
+            let okay = UIAlertAction(title: "To Settings?", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+                //
+                
+            })
+            let cancel = UIAlertAction(title: "Ignore", style: UIAlertActionStyle.Cancel, handler: nil)
+            
+            alert.addAction(okay)
+            alert.addAction(cancel)
+            
+            self.presentViewController(alert, animated: true, completion: nil)
         }
         
         let app = UIApplication.sharedApplication().delegate as AppDelegate
-        app.calendarController.checkEKAuthorizationStatus({
-            (authorized, description) -> Void in
-            
-            if authorized != nil {
-                if !authorized! {
-                    let alert = UIAlertController(title: "App Requires Calendar Permission", message: description, preferredStyle: UIAlertControllerStyle.Alert)
-                    
-                    let okay = UIAlertAction(title: "To Settings?", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-                        //
-                        
-                        
-                    })
-                    let cancel = UIAlertAction(title: "Ignore", style: UIAlertActionStyle.Cancel, handler: nil)
-                    
-                    alert.addAction(okay)
-                    alert.addAction(cancel)
-                    
-                    self.presentViewController(alert, animated: true, completion: nil)
-                } else {
-                    
-                    
-                }
-            }
-        })
+        app.calendarController.checkEventStoreAccessForCalendar()
+        
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: EK_AUTH_FAIL, object: nil)
+    }
+    
+    
+    //MARK: Setup
     func setupUserAlertController() -> UIAlertController {
         let setupController = UIAlertController(title: "User Actions", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
         
