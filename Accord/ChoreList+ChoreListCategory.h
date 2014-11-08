@@ -11,4 +11,6 @@
 
 @interface ChoreList (ChoreListCategory)
 
++(void)createChoreList:(NSString*)name withContext:(NSManagedObjectContext*)context;
+
 @end

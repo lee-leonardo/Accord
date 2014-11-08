@@ -10,4 +10,11 @@
 
 @implementation Chore (ChoreCategory)
 
++(void)createChoreMacro:(NSString *)name withContext:(NSManagedObjectContext *)context
+{
+    Chore *newChore = [NSEntityDescription insertNewObjectForEntityForName:[NSString stringWithFormat:@"CHORE_%@", name] inManagedObjectContext:context];
+    newChore.choreIdentifier = name;
+    
+}
+
 @end

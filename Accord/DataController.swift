@@ -12,10 +12,12 @@ import CoreData
 class DataController {
     var dataContext : NSManagedObjectContext
     var user : User
+    var dataQueue : NSOperationQueue
 //    var fetchResults: NSFetchedResultsController?
     
     init() {
         self.dataContext = NSManagedObjectContext()
+        self.dataQueue = NSOperationQueue()
         
         if NSUserDefaults.standardUserDefaults().objectForKey("username") != nil {
             var request = NSFetchRequest(entityName: "User")
@@ -25,13 +27,20 @@ class DataController {
             if error != nil {
                 println("\(error?.localizedDescription)")
             } else {
-                
+                if let userList = users as? [User] {
+                    for aUser in userList {
+//                        let login = aUser.name
+                    }
+                }
             }
             
         } else {
             
+            //Generate a user name and figure out mulitple accounts?
+            
             //NSUserDefaults.standardUserDefaults().setObject(<#value: AnyObject?#>, forKey: <#String#>)
-
+            
+            
         }
         
         //Delete this soon, this'll break the project. This is so the compiler stops yelling at me.
@@ -45,5 +54,13 @@ class DataController {
     func retrieveUserData() {
         
     }
+    
+    //MARK: Users
+    
+    //MARK: Chore
+    
+    //MARK: ChoreList
+    
+    
     
 }

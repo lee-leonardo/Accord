@@ -11,4 +11,6 @@
 
 @interface User (UserCategory)
 
++(void)createUser:(NSString *)username withContext:(NSManagedObjectContext *)context;
+
 @end

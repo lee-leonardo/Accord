@@ -10,4 +10,12 @@
 
 @implementation ChoreList (ChoreListCategory)
 
++(void)createChoreList:(NSString*)name withContext:(NSManagedObjectContext*)context
+{
+    ChoreList *newChoreList = [NSEntityDescription insertNewObjectForEntityForName:[NSString stringWithFormat:@"CHORE_LIST_%@", name] inManagedObjectContext:context];
+    
+    newChoreList.title = name;
+    newChoreList.admin = [[NSUserDefaults standardUserDefaults] stringForKey:@"username"];
+}
+
 @end
