@@ -12,7 +12,7 @@
 
 +(void)createChoreMacro:(NSString *)name withContext:(NSManagedObjectContext *)context
 {
-    Chore *newChore = [NSEntityDescription insertNewObjectForEntityForName:[NSString stringWithFormat:@"CHORE_%@", name] inManagedObjectContext:context];
+    Chore *newChore = [NSEntityDescription insertNewObjectForEntityForName:@"Chore" inManagedObjectContext:context];
     newChore.choreIdentifier = name;
     
 }

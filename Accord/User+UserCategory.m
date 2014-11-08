@@ -14,7 +14,7 @@
 +(void)createUser:(NSString *)username withContext:(NSManagedObjectContext *)context
 {
     
-    User *newUser = [NSEntityDescription insertNewObjectForEntityForName:[NSString stringWithFormat:@"USER_%@", username] inManagedObjectContext:context];
+    User *newUser = [NSEntityDescription insertNewObjectForEntityForName:@"User" inManagedObjectContext:context];
     
     newUser.name = username;
     
