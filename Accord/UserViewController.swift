@@ -21,6 +21,11 @@ class UserViewController: UIViewController {
         super.viewDidLoad()
         self.title = "User"
         self.userAlertController = setupUserAlertController()
+        
+        
+//        var loginView = FBLoginView()
+//        loginView.center = self.view.center
+//        self.view.addSubview(loginView)
 
     }
     
