@@ -18,7 +18,7 @@ class MessageController {
             }
             
             if !(Static.instance != nil) {
-                Static.instance = MessageController()
+                Static.instance = MessageController ()
             }
             
             return Static.instance!

@@ -6,3 +6,8 @@
 #import "User+UserCategory.h"
 #import "Chore+ChoreCategory.h"
 #import "ChoreList+ChoreListCategory.h"
+
+#import "TAGContainer.h"
+#import "TAGContainerOpener.h"
+#import "TAGManager.h"
+#import "TAGDataLayer.h"

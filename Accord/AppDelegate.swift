@@ -14,11 +14,14 @@ import TwitterKit
 import Crashlytics
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, TAGContainerOpenerNotifier {
 
     var window: UIWindow?
     var calendarController = CalendarController()
     var calQueue = NSOperationQueue()
+    
+    var tagManager : TAGManager!
+    var container : TAGContainer?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -36,12 +39,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //
         }
         
+        //Google Tag Manager
+        self.tagManager = TAGManager.instance()
+        self.tagManager.logger.setLogLevel(kTAGLoggerLogLevelVerbose)
+        
+        /*
+        * Opens a container.
+        *
+        * @param containerId The ID of the container to load.
+        * @param tagManager The TAGManager instance for getting the container.
+        * @param openType The choice of how to open the container.
+        * @param timeout The timeout period (default is 2.0 seconds).
+        * @param notifier The notifier to inform on container load events.
+        */
+        
+        
+        TAGContainerOpener.openContainerWithId("GTM-T2SHZR", tagManager: self.tagManager, openType: kTAGOpenTypePreferFresh, timeout: nil, notifier: self)
+        
+        //Preview URL
+        if let url = launchOptions?[UIApplicationLaunchOptionsURLKey] as? NSURL {
+            self.tagManager.previewWithUrl(url)
+        }
+        
+        //Future??
+        
+        
         return true
     }
     
-//    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
-//        return FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
-//    }
+    func containerAvailable(container : TAGContainer) {
+        dispatch_async(dispatch_get_main_queue(), {
+            () -> Void in
+            self.container = container
+        })
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        
+        //let facebook = FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
+        let gtag = self.tagManager.previewWithUrl(url)
+        
+        return gtag
+    }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

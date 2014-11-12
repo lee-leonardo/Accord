@@ -55,6 +55,17 @@
 		3885867919CA9CBC00E79A17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3885867819CA9CBC00E79A17 /* Images.xcassets */; };
 		3885867C19CA9CBC00E79A17 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3885867A19CA9CBC00E79A17 /* LaunchScreen.xib */; };
 		3885868819CA9CBC00E79A17 /* AccordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3885868719CA9CBC00E79A17 /* AccordTests.swift */; };
+		38A1E8441A140E79008CD632 /* Changelog.txt in Resources */ = {isa = PBXBuildFile; fileRef = 38A1E7C91A140E79008CD632 /* Changelog.txt */; };
+		38A1E8631A140E79008CD632 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 38A1E7FF1A140E79008CD632 /* Readme.txt */; };
+		38A1E8641A140E79008CD632 /* Changelog.txt in Resources */ = {isa = PBXBuildFile; fileRef = 38A1E8011A140E79008CD632 /* Changelog.txt */; };
+		38A1E88E1A140E79008CD632 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 38A1E8401A140E79008CD632 /* Readme.txt */; };
+		38A1E88F1A140E79008CD632 /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A1E8411A140E79008CD632 /* libAdIdAccess.a */; };
+		38A1E8901A140E79008CD632 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A1E8421A140E79008CD632 /* libGoogleAnalyticsServices.a */; };
+		38A1E8911A140E79008CD632 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 38A1E8431A140E79008CD632 /* Readme.txt */; };
+		38A1E8991A140F9E008CD632 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A1E8981A140F9E008CD632 /* SystemConfiguration.framework */; };
+		38A1E89B1A140FAB008CD632 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A1E89A1A140FAB008CD632 /* libz.dylib */; };
+		38A1E89D1A140FB2008CD632 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A1E89C1A140FB2008CD632 /* libsqlite3.dylib */; };
+		38A1E89F1A140FDF008CD632 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38A1E89E1A140FDF008CD632 /* AdSupport.framework */; };
 		38A5FB1A19CAA8E700FCB998 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A5FB1919CAA8E700FCB998 /* CalendarController.swift */; };
 		38BFE66219CCC54800E130D5 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BFE66119CCC54800E130D5 /* DataController.swift */; };
 		38BFE66619CCD1C700E130D5 /* Chore.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BFE66519CCD1C700E130D5 /* Chore.m */; };
@@ -130,6 +141,33 @@
 		3885868119CA9CBC00E79A17 /* AccordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccordTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3885868619CA9CBC00E79A17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3885868719CA9CBC00E79A17 /* AccordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccordTests.swift; sourceTree = "<group>"; };
+		38A1E7C91A140E79008CD632 /* Changelog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Changelog.txt; sourceTree = "<group>"; };
+		38A1E7F51A140E79008CD632 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		38A1E7F61A140E79008CD632 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		38A1E7F71A140E79008CD632 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
+		38A1E7F81A140E79008CD632 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		38A1E7F91A140E79008CD632 /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		38A1E7FA1A140E79008CD632 /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		38A1E7FB1A140E79008CD632 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		38A1E7FC1A140E79008CD632 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		38A1E7FD1A140E79008CD632 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		38A1E7FE1A140E79008CD632 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		38A1E7FF1A140E79008CD632 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		38A1E8011A140E79008CD632 /* Changelog.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Changelog.txt; sourceTree = "<group>"; };
+		38A1E83B1A140E79008CD632 /* TAGContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGContainer.h; sourceTree = "<group>"; };
+		38A1E83C1A140E79008CD632 /* TAGContainerOpener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGContainerOpener.h; sourceTree = "<group>"; };
+		38A1E83D1A140E79008CD632 /* TAGDataLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGDataLayer.h; sourceTree = "<group>"; };
+		38A1E83E1A140E79008CD632 /* TAGLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGLogger.h; sourceTree = "<group>"; };
+		38A1E83F1A140E79008CD632 /* TAGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGManager.h; sourceTree = "<group>"; };
+		38A1E8401A140E79008CD632 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		38A1E8411A140E79008CD632 /* libAdIdAccess.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdIdAccess.a; sourceTree = "<group>"; };
+		38A1E8421A140E79008CD632 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		38A1E8431A140E79008CD632 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		38A1E8981A140F9E008CD632 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		38A1E89A1A140FAB008CD632 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		38A1E89C1A140FB2008CD632 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		38A1E89E1A140FDF008CD632 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		38A1E8A21A141B57008CD632 /* GTM-T2SHZR */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTM-T2SHZR"; sourceTree = "<group>"; };
 		38A5FB1919CAA8E700FCB998 /* CalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 		38BFE66119CCC54800E130D5 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		38BFE66319CCD1C700E130D5 /* Accord-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Accord-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
@@ -155,7 +193,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38A1E89F1A140FDF008CD632 /* AdSupport.framework in Frameworks */,
+				38A1E89D1A140FB2008CD632 /* libsqlite3.dylib in Frameworks */,
+				38A1E89B1A140FAB008CD632 /* libz.dylib in Frameworks */,
+				38A1E8991A140F9E008CD632 /* SystemConfiguration.framework in Frameworks */,
 				3836BE911A09808200E38CC0 /* AddressBook.framework in Frameworks */,
+				38A1E88F1A140E79008CD632 /* libAdIdAccess.a in Frameworks */,
+				38A1E8901A140E79008CD632 /* libGoogleAnalyticsServices.a in Frameworks */,
 				385F7EFB1A0EE725006EC126 /* TwitterKit.framework in Frameworks */,
 				3836BE921A09808200E38CC0 /* AddressBookUI.framework in Frameworks */,
 				3836BE931A09808200E38CC0 /* MessageUI.framework in Frameworks */,
@@ -253,6 +297,7 @@
 		3885866C19CA9CBC00E79A17 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				38A1E8A21A141B57008CD632 /* GTM-T2SHZR */,
 				3885866D19CA9CBC00E79A17 /* Info.plist */,
 				38EDAA3E1A0C058C00C6EE69 /* Accord.entitlements */,
 			);
@@ -310,6 +355,68 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		38A1E7C71A140E79008CD632 /* GoogleAnalyticsServicesiOS_3.10 */ = {
+			isa = PBXGroup;
+			children = (
+				38A1E7C81A140E79008CD632 /* GoogleAnalytics */,
+				38A1E8001A140E79008CD632 /* GoogleTagManager */,
+				38A1E8411A140E79008CD632 /* libAdIdAccess.a */,
+				38A1E8421A140E79008CD632 /* libGoogleAnalyticsServices.a */,
+				38A1E8431A140E79008CD632 /* Readme.txt */,
+			);
+			name = GoogleAnalyticsServicesiOS_3.10;
+			path = ../../../Documents/GoogleAnalyticsServicesiOS_3.10;
+			sourceTree = "<group>";
+		};
+		38A1E7C81A140E79008CD632 /* GoogleAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				38A1E7C91A140E79008CD632 /* Changelog.txt */,
+				38A1E7F41A140E79008CD632 /* Library */,
+				38A1E7FF1A140E79008CD632 /* Readme.txt */,
+			);
+			path = GoogleAnalytics;
+			sourceTree = "<group>";
+		};
+		38A1E7F41A140E79008CD632 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				38A1E7F51A140E79008CD632 /* GAI.h */,
+				38A1E7F61A140E79008CD632 /* GAIDictionaryBuilder.h */,
+				38A1E7F71A140E79008CD632 /* GAIEcommerceFields.h */,
+				38A1E7F81A140E79008CD632 /* GAIEcommerceProduct.h */,
+				38A1E7F91A140E79008CD632 /* GAIEcommerceProductAction.h */,
+				38A1E7FA1A140E79008CD632 /* GAIEcommercePromotion.h */,
+				38A1E7FB1A140E79008CD632 /* GAIFields.h */,
+				38A1E7FC1A140E79008CD632 /* GAILogger.h */,
+				38A1E7FD1A140E79008CD632 /* GAITrackedViewController.h */,
+				38A1E7FE1A140E79008CD632 /* GAITracker.h */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		38A1E8001A140E79008CD632 /* GoogleTagManager */ = {
+			isa = PBXGroup;
+			children = (
+				38A1E8011A140E79008CD632 /* Changelog.txt */,
+				38A1E83A1A140E79008CD632 /* Library */,
+				38A1E8401A140E79008CD632 /* Readme.txt */,
+			);
+			path = GoogleTagManager;
+			sourceTree = "<group>";
+		};
+		38A1E83A1A140E79008CD632 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				38A1E83B1A140E79008CD632 /* TAGContainer.h */,
+				38A1E83C1A140E79008CD632 /* TAGContainerOpener.h */,
+				38A1E83D1A140E79008CD632 /* TAGDataLayer.h */,
+				38A1E83E1A140E79008CD632 /* TAGLogger.h */,
+				38A1E83F1A140E79008CD632 /* TAGManager.h */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		38A5FB1819CAA8D700FCB998 /* Framework Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +458,11 @@
 		38F7C1721A0B4A2200A01E65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				38A1E89E1A140FDF008CD632 /* AdSupport.framework */,
+				38A1E89C1A140FB2008CD632 /* libsqlite3.dylib */,
+				38A1E89A1A140FAB008CD632 /* libz.dylib */,
+				38A1E8981A140F9E008CD632 /* SystemConfiguration.framework */,
+				38A1E7C71A140E79008CD632 /* GoogleAnalyticsServicesiOS_3.10 */,
 				385F7EFE1A0EE93B006EC126 /* Crashlytics.framework */,
 				385F7EF81A0EE725006EC126 /* TwitterKit.framework */,
 				385F7EF91A0EE725006EC126 /* TwitterKitResources.bundle */,
@@ -449,11 +561,14 @@
 				385DA09019F1A35D007FED54 /* tick.svg in Resources */,
 				385DA08C19F1A35D007FED54 /* star.svg in Resources */,
 				385DA08D19F1A35D007FED54 /* th-list-outline.svg in Resources */,
+				38A1E8631A140E79008CD632 /* Readme.txt in Resources */,
+				38A1E8911A140E79008CD632 /* Readme.txt in Resources */,
 				385DA09519F1A35D007FED54 /* user-delete-outline.svg in Resources */,
 				385DA09619F1A35D007FED54 /* user-delete.svg in Resources */,
 				385DA09219F1A35D007FED54 /* times.svg in Resources */,
 				385DA08719F1A35D007FED54 /* minus-outline.svg in Resources */,
 				385DA09819F1A35D007FED54 /* user.svg in Resources */,
+				38A1E88E1A140E79008CD632 /* Readme.txt in Resources */,
 				385F7EFC1A0EE725006EC126 /* TwitterKitResources.bundle in Resources */,
 				385DA08419F1A35D007FED54 /* flow-parallel.svg in Resources */,
 				385DA08819F1A35D007FED54 /* minus.svg in Resources */,
@@ -474,6 +589,8 @@
 				385DA08A19F1A35D007FED54 /* plus.svg in Resources */,
 				3885867919CA9CBC00E79A17 /* Images.xcassets in Resources */,
 				385DA09A19F1B363007FED54 /* ChoreCell.xib in Resources */,
+				38A1E8441A140E79008CD632 /* Changelog.txt in Resources */,
+				38A1E8641A140E79008CD632 /* Changelog.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,6 +782,10 @@
 				);
 				INFOPLIST_FILE = Accord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/leoleez/Documents/GoogleAnalyticsServicesiOS_3.10,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Accord-Bridging-Header.h";
@@ -688,6 +809,10 @@
 				);
 				INFOPLIST_FILE = Accord/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/leoleez/Documents/GoogleAnalyticsServicesiOS_3.10,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Accord-Bridging-Header.h";

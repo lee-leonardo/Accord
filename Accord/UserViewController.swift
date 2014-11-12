@@ -59,6 +59,17 @@ class UserViewController: UIViewController {
         let app = UIApplication.sharedApplication().delegate as AppDelegate
         app.calendarController.checkEventStoreAccessForCalendar()
         
+        
+        
+        //TagConfig Man
+        let container = app.container
+        var versionString = container?.stringForKey("app_name")
+        println("\(versionString)")
+        
+        //Datalayer
+        var datalayer = app.tagManager.dataLayer
+        datalayer.push(["event":"openScreen", "screenName":"Home Screen"])
+        
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -101,5 +112,13 @@ class UserViewController: UIViewController {
             () -> Void in
         }
     }
+    
+    
+    @IBAction func fireGoogleTag(sender: AnyObject) {
+        let app = UIApplication.sharedApplication().delegate as AppDelegate
+        let datalayer = app.tagManager.dataLayer
+        datalayer.push(["event":"fireGoogleTagButtonPressed"])
+    }
+    
 
 }

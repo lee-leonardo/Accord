@@ -21,9 +21,11 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.leeleonardo.accord</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string></string>
+				<string>tagmanager.c.leeleonardo.accord</string>
 			</array>
 		</dict>
 	</array>
