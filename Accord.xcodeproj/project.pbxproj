@@ -10,6 +10,7 @@
 		38001BFE19F5765500D66A7A /* NewChoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38001BFD19F5765500D66A7A /* NewChoreViewController.swift */; };
 		38001C0019F590F300D66A7A /* NewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38001BFF19F590F300D66A7A /* NewListViewController.swift */; };
 		381D8C9119F346CA002F587F /* ListChoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381D8C9019F346CA002F587F /* ListChoresViewController.swift */; };
+		382D35991A150DE1004C9657 /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 382D35981A150DE1004C9657 /* UIDevice+Hardware.m */; };
 		3836BE8D1A097DF500E38CC0 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3836BE8C1A097DF500E38CC0 /* EventKit.framework */; };
 		3836BE911A09808200E38CC0 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3836BE8E1A09808200E38CC0 /* AddressBook.framework */; };
 		3836BE921A09808200E38CC0 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3836BE8F1A09808200E38CC0 /* AddressBookUI.framework */; };
@@ -92,6 +93,8 @@
 		38001BFD19F5765500D66A7A /* NewChoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChoreViewController.swift; sourceTree = "<group>"; };
 		38001BFF19F590F300D66A7A /* NewListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewListViewController.swift; sourceTree = "<group>"; };
 		381D8C9019F346CA002F587F /* ListChoresViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListChoresViewController.swift; sourceTree = "<group>"; };
+		382D35971A150DE1004C9657 /* UIDevice+Hardware.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Hardware.h"; sourceTree = "<group>"; };
+		382D35981A150DE1004C9657 /* UIDevice+Hardware.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Hardware.m"; sourceTree = "<group>"; };
 		3836BE8C1A097DF500E38CC0 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		3836BE8E1A09808200E38CC0 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		3836BE8F1A09808200E38CC0 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
@@ -458,6 +461,8 @@
 		38F7C1721A0B4A2200A01E65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				382D35971A150DE1004C9657 /* UIDevice+Hardware.h */,
+				382D35981A150DE1004C9657 /* UIDevice+Hardware.m */,
 				38A1E89E1A140FDF008CD632 /* AdSupport.framework */,
 				38A1E89C1A140FB2008CD632 /* libsqlite3.dylib */,
 				38A1E89A1A140FAB008CD632 /* libz.dylib */,
@@ -634,6 +639,7 @@
 				38BFE66C19CCD1C800E130D5 /* ChoreList.m in Sources */,
 				385A3E9A1A05EA220059C67E /* MessageController.swift in Sources */,
 				38BFE66219CCC54800E130D5 /* DataController.swift in Sources */,
+				382D35991A150DE1004C9657 /* UIDevice+Hardware.m in Sources */,
 				385DA0A419F1C9F2007FED54 /* BoolSettingCell.swift in Sources */,
 				385DA0A019F1B85F007FED54 /* ListViewController.swift in Sources */,
 				38001BFE19F5765500D66A7A /* NewChoreViewController.swift in Sources */,

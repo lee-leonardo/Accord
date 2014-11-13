@@ -22,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TAGContainerOpenerNotifie
     
     var tagManager : TAGManager!
     var container : TAGContainer?
+    
+    
+    var tagQueue = NSOperationQueue()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -30,13 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TAGContainerOpenerNotifie
         
         NSNotificationCenter.defaultCenter().addObserverForName(EK_AUTH_ATTEMPT, object: self, queue: calQueue) {
             (note) -> Void in
-            //
         }
         
         //This is for the controller that houses the EKEventStoreController.
         NSNotificationCenter.defaultCenter().addObserverForName(EKEventStoreChangedNotification, object: self, queue: calQueue) {
             (note) -> Void in
-            //
         }
         
         //Google Tag Manager
@@ -45,14 +46,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TAGContainerOpenerNotifie
         
         /*
         * Opens a container.
-        *
         * @param containerId The ID of the container to load.
         * @param tagManager The TAGManager instance for getting the container.
         * @param openType The choice of how to open the container.
         * @param timeout The timeout period (default is 2.0 seconds).
         * @param notifier The notifier to inform on container load events.
         */
-        
         
         TAGContainerOpener.openContainerWithId("GTM-T2SHZR", tagManager: self.tagManager, openType: kTAGOpenTypePreferFresh, timeout: nil, notifier: self)
         
@@ -62,11 +61,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TAGContainerOpenerNotifie
         }
         
         //Future??
-        
+//        var future = TAGContainerOpener.openContainerWithId("GTM-T2SHZR", tagManager: self.tagManager, openType: kTAGOpenTypePreferNonDefault, timeout: nil) as TAGContainer
+//        self.container = future.get()
         
         return true
     }
     
+    //TAGContainerNotifier callback.
     func containerAvailable(container : TAGContainer) {
         dispatch_async(dispatch_get_main_queue(), {
             () -> Void in
@@ -77,9 +78,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TAGContainerOpenerNotifie
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
         
         //let facebook = FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
+        //let twitter = 
+        
         let gtag = self.tagManager.previewWithUrl(url)
         
         return gtag
+        
+        //return facebook || twitter || gtag
     }
 
     func applicationWillResignActive(application: UIApplication) {

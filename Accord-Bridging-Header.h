@@ -11,3 +11,5 @@
 #import "TAGContainerOpener.h"
 #import "TAGManager.h"
 #import "TAGDataLayer.h"
+
+#import "UIDevice+Hardware.h"

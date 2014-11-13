@@ -70,6 +70,10 @@ class UserViewController: UIViewController {
         var datalayer = app.tagManager.dataLayer
         datalayer.push(["event":"openScreen", "screenName":"Home Screen"])
         
+        let hardware = UIDevice.hardwareSimpleDescription(UIDevice.currentDevice())
+        let os = UIDevice.currentDevice().systemVersion
+        datalayer.push(["hardware" : "\(hardware)", "os_version" : "\(os)"])
+        
     }
     
     override func viewWillDisappear(animated: Bool) {
