@@ -61,8 +61,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TAGContainerOpenerNotifie
         }
         
         //Future??
-//        var future = TAGContainerOpener.openContainerWithId("GTM-T2SHZR", tagManager: self.tagManager, openType: kTAGOpenTypePreferNonDefault, timeout: nil) as TAGContainer
-//        self.container = future.get()
+        //var future = TAGContainerOpener.openContainerWithId("GTM-T2SHZR", tagManager: self.tagManager, openType: kTAGOpenTypePreferNonDefault, timeout: nil) as TAGContainer
+        //self.container = future.get()
         
         return true
     }
@@ -78,12 +78,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TAGContainerOpenerNotifie
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
         
         //let facebook = FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
-        //let twitter = 
+        //let twitter =
         
         let gtag = self.tagManager.previewWithUrl(url)
         
         return gtag
-        
         //return facebook || twitter || gtag
     }
 

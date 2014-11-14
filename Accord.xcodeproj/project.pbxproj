@@ -10,6 +10,7 @@
 		38001BFE19F5765500D66A7A /* NewChoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38001BFD19F5765500D66A7A /* NewChoreViewController.swift */; };
 		38001C0019F590F300D66A7A /* NewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38001BFF19F590F300D66A7A /* NewListViewController.swift */; };
 		381D8C9119F346CA002F587F /* ListChoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381D8C9019F346CA002F587F /* ListChoresViewController.swift */; };
+		381F7ABC1A15F1D6004088E3 /* GTM-T2SHZR in Resources */ = {isa = PBXBuildFile; fileRef = 38A1E8A21A141B57008CD632 /* GTM-T2SHZR */; };
 		382D35991A150DE1004C9657 /* UIDevice+Hardware.m in Sources */ = {isa = PBXBuildFile; fileRef = 382D35981A150DE1004C9657 /* UIDevice+Hardware.m */; };
 		3836BE8D1A097DF500E38CC0 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3836BE8C1A097DF500E38CC0 /* EventKit.framework */; };
 		3836BE911A09808200E38CC0 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3836BE8E1A09808200E38CC0 /* AddressBook.framework */; };
@@ -170,7 +171,7 @@
 		38A1E89A1A140FAB008CD632 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		38A1E89C1A140FB2008CD632 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		38A1E89E1A140FDF008CD632 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		38A1E8A21A141B57008CD632 /* GTM-T2SHZR */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTM-T2SHZR"; sourceTree = "<group>"; };
+		38A1E8A21A141B57008CD632 /* GTM-T2SHZR */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GTM-T2SHZR"; path = "../GTM-T2SHZR"; sourceTree = "<group>"; };
 		38A5FB1919CAA8E700FCB998 /* CalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 		38BFE66119CCC54800E130D5 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		38BFE66319CCD1C700E130D5 /* Accord-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Accord-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
@@ -585,6 +586,7 @@
 				385DA09419F1A35D007FED54 /* user-add.svg in Resources */,
 				385DA08619F1A35D007FED54 /* infinity.svg in Resources */,
 				385DA09119F1A35D007FED54 /* times-outline.svg in Resources */,
+				381F7ABC1A15F1D6004088E3 /* GTM-T2SHZR in Resources */,
 				385DA08319F1A35D007FED54 /* flow-merge.svg in Resources */,
 				385DA09719F1A35D007FED54 /* user-outline.svg in Resources */,
 				385DA08919F1A35D007FED54 /* plus-outline.svg in Resources */,

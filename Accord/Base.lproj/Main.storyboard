@@ -36,14 +36,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHr-kj-9l0">
-                                <rect key="frame" x="52" y="117" width="172" height="86"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHr-kj-9l0">
+                                <rect key="frame" x="214" y="108" width="172" height="86"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="72"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyz-Hn-6vJ">
-                                <rect key="frame" x="242" y="285" width="116" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zyz-Hn-6vJ">
+                                <rect key="frame" x="242" y="238" width="116" height="30"/>
                                 <state key="normal" title="Google Tag Fires">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -53,6 +53,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="OHr-kj-9l0" secondAttribute="centerX" id="DCW-p9-aNW"/>
+                            <constraint firstAttribute="centerX" secondItem="Zyz-Hn-6vJ" secondAttribute="centerX" id="Def-lM-5vd"/>
+                            <constraint firstItem="OHr-kj-9l0" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="QRI-Cs-c2V"/>
+                            <constraint firstItem="Zyz-Hn-6vJ" firstAttribute="top" secondItem="OHr-kj-9l0" secondAttribute="bottom" constant="44" id="aWZ-4V-eib"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8qT-z0-ilF">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="al0-eG-ica">
@@ -61,10 +67,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="fireOffTag" destination="Zyz-Hn-6vJ" id="yqU-C7-0Zh"/>
-                        <outlet property="firesTag" destination="Zyz-Hn-6vJ" id="z4B-pH-mcl"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

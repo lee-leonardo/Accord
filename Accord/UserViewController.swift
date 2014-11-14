@@ -68,11 +68,12 @@ class UserViewController: UIViewController {
         
         //Datalayer
         var datalayer = app.tagManager.dataLayer
-        datalayer.push(["event":"openScreen", "screenName":"Home Screen"])
+        datalayer.push(["event":"openScreen", "screenName":"Home Screen"]) //Shouldn't work.
         
         let hardware = UIDevice.hardwareSimpleDescription(UIDevice.currentDevice())
         let os = UIDevice.currentDevice().systemVersion
-        datalayer.push(["hardware" : "\(hardware)", "os_version" : "\(os)"])
+        datalayer.push(["hardware" : "\(hardware)", "os_version" : "\(os)"]) //Hopefully returns the correct information.
+        println("Hardware Version: \(hardware) and OS Version: \(os)")
         
     }
     
@@ -119,6 +120,8 @@ class UserViewController: UIViewController {
     
     
     @IBAction func fireGoogleTag(sender: AnyObject) {
+        println("Fired off the Button")
+        
         let app = UIApplication.sharedApplication().delegate as AppDelegate
         let datalayer = app.tagManager.dataLayer
         datalayer.push(["event":"fireGoogleTagButtonPressed"])
