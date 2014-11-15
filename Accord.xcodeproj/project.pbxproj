@@ -77,6 +77,7 @@
 		38BFE67419CCD24600E130D5 /* Chore+ChoreCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BFE67319CCD24600E130D5 /* Chore+ChoreCategory.m */; };
 		38BFE67819CCD25C00E130D5 /* ChoreList+ChoreListCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BFE67719CCD25C00E130D5 /* ChoreList+ChoreListCategory.m */; };
 		38DD044219CBF73F00A0FE50 /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DD044119CBF73F00A0FE50 /* EventController.swift */; };
+		38F6134A1A16DEAF0023214A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F613491A16DEAF0023214A /* CoreData.framework */; };
 		38F7C1711A0B410D00A01E65 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F7C1701A0B410D00A01E65 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -171,7 +172,7 @@
 		38A1E89A1A140FAB008CD632 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		38A1E89C1A140FB2008CD632 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		38A1E89E1A140FDF008CD632 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		38A1E8A21A141B57008CD632 /* GTM-T2SHZR */ = {isa = PBXFileReference; lastKnownFileType = file; name = "GTM-T2SHZR"; path = "../GTM-T2SHZR"; sourceTree = "<group>"; };
+		38A1E8A21A141B57008CD632 /* GTM-T2SHZR */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTM-T2SHZR"; sourceTree = "<group>"; };
 		38A5FB1919CAA8E700FCB998 /* CalendarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 		38BFE66119CCC54800E130D5 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		38BFE66319CCD1C700E130D5 /* Accord-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Accord-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
@@ -189,6 +190,7 @@
 		38BFE67719CCD25C00E130D5 /* ChoreList+ChoreListCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ChoreList+ChoreListCategory.m"; sourceTree = "<group>"; };
 		38DD044119CBF73F00A0FE50 /* EventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventController.swift; sourceTree = "<group>"; };
 		38EDAA3E1A0C058C00C6EE69 /* Accord.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Accord.entitlements; sourceTree = "<group>"; };
+		38F613491A16DEAF0023214A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		38F7C1701A0B410D00A01E65 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,6 +199,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F6134A1A16DEAF0023214A /* CoreData.framework in Frameworks */,
 				38A1E89F1A140FDF008CD632 /* AdSupport.framework in Frameworks */,
 				38A1E89D1A140FB2008CD632 /* libsqlite3.dylib in Frameworks */,
 				38A1E89B1A140FAB008CD632 /* libz.dylib in Frameworks */,
@@ -462,6 +465,7 @@
 		38F7C1721A0B4A2200A01E65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				38F613491A16DEAF0023214A /* CoreData.framework */,
 				382D35971A150DE1004C9657 /* UIDevice+Hardware.h */,
 				382D35981A150DE1004C9657 /* UIDevice+Hardware.m */,
 				38A1E89E1A140FDF008CD632 /* AdSupport.framework */,

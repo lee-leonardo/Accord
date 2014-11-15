@@ -41,39 +41,51 @@ class UserViewController: UIViewController {
 //            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "PREPPED")
 //        }
         
-        NSNotificationCenter.defaultCenter().addObserverForName(EK_AUTH_FAIL, object: self, queue: NSOperationQueue.mainQueue()) { (note) -> Void in
-            let alert = UIAlertController(title: "App Requires Permission", message: "This app requires calendar permissions to function.", preferredStyle: UIAlertControllerStyle.Alert)
-            
-            let okay = UIAlertAction(title: "To Settings?", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-                //
-                
-            })
-            let cancel = UIAlertAction(title: "Ignore", style: UIAlertActionStyle.Cancel, handler: nil)
-            
-            alert.addAction(okay)
-            alert.addAction(cancel)
-            
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
+//        NSNotificationCenter.defaultCenter().addObserverForName(EK_AUTH_FAIL, object: self, queue: NSOperationQueue.mainQueue()) { (note) -> Void in
+//            let alert = UIAlertController(title: "App Requires Permission", message: "This app requires calendar permissions to function.", preferredStyle: UIAlertControllerStyle.Alert)
+//            
+//            let okay = UIAlertAction(title: "To Settings?", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+//                //
+//                
+//            })
+//            let cancel = UIAlertAction(title: "Ignore", style: UIAlertActionStyle.Cancel, handler: nil)
+//            
+//            alert.addAction(okay)
+//            alert.addAction(cancel)
+//            
+//            self.presentViewController(alert, animated: true, completion: nil)
+//        }
+        
         
         let app = UIApplication.sharedApplication().delegate as AppDelegate
-        app.calendarController.checkEventStoreAccessForCalendar()
-        
-        
+//        app.calendarController.checkEventStoreAccessForCalendar()
         
         //TagConfig Man
         let container = app.container
-        var versionString = container?.stringForKey("app_name")
-        println("\(versionString)")
+        let idString = container?.stringForKey("app_id")!
+        let versionString = container?.stringForKey("app_name")!
+        println("id: \(idString)\nversion: \(versionString)")
+        
+        let osString = container?.stringForKey("os_version")!
+        let hardwareString = container?.stringForKey("hardware")!
+        let platformString = container?.stringForKey("platform")!
+        println("os: \(osString)\nhardware: \(hardwareString)\nplatform: \(platformString)")
+        
+//        let hardware = UIDevice.hardwareSimpleDescription(UIDevice.currentDevice())
+//        let os = UIDevice.currentDevice().systemVersion
         
         //Datalayer
         var datalayer = app.tagManager.dataLayer
-        datalayer.push(["event":"openScreen", "screenName":"Home Screen"]) //Shouldn't work.
+        var tracker = app.ga.defaultTracker
         
-        let hardware = UIDevice.hardwareSimpleDescription(UIDevice.currentDevice())
-        let os = UIDevice.currentDevice().systemVersion
-        datalayer.push(["hardware" : "\(hardware)", "os_version" : "\(os)"]) //Hopefully returns the correct information.
-        println("Hardware Version: \(hardware) and OS Version: \(os)")
+        //TAG: appOpened
+        datalayer.push(["event":"openScreen", "platform":"\(platformString)"])
+        
+        //TAG: latestHardware
+        datalayer.push(["hardware":"\(hardwareString)", "os_version":"\(osString)", "platform":"\(platformString)"])
+        
+        tracker.set(kGAIScreenName, value: "User Screen")
+        tracker.send(GAIDictionaryBuilder.createScreenView().build())
         
     }
     
@@ -124,7 +136,15 @@ class UserViewController: UIViewController {
         
         let app = UIApplication.sharedApplication().delegate as AppDelegate
         let datalayer = app.tagManager.dataLayer
-        datalayer.push(["event":"fireGoogleTagButtonPressed"])
+        let container = app.container
+        let appID = app.container?.stringForKey("app_id")!
+        let version = app.container?.stringForKey("os_version")!
+        let device = app.container?.stringForKey("device_name")!
+        let platform = app.container?.stringForKey("platform")!
+        println("\n\n\nAppID: \(appID!)\nVersion: \(version)\nDevice: \(device)\nPlatform: \(platform)")
+        
+        //app.tagManager
+        datalayer.push(["event":"fireGoogleTagButtonPressed", "app_id":"\(appID)", "os_version":"\(version)", "device_name":"\(device)", "platform":"\(platform)"])
     }
     
 

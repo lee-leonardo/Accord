@@ -23,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TAGContainerOpenerNotifie
     var tagManager : TAGManager!
     var container : TAGContainer?
     
+    var ga: GAI!
+    var gaTracker : GAITracker!
+    
     
     var tagQueue = NSOperationQueue()
 
@@ -43,6 +46,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TAGContainerOpenerNotifie
         //Google Tag Manager
         self.tagManager = TAGManager.instance()
         self.tagManager.logger.setLogLevel(kTAGLoggerLogLevelVerbose)
+        
+        self.ga = GAI.sharedInstance()
+        self.ga.trackUncaughtExceptions = true
+        self.ga.dispatchInterval = 20
+        //self.ga.logger.logLevel //This no logLevel function.
+        self.ga.defaultTracker = self.ga.trackerWithTrackingId("UA-56757896-1")
+        //self.gaTracker = self.ga.defaultTracker
         
         /*
         * Opens a container.
