@@ -84,6 +84,10 @@ class UserViewController: UIViewController {
         //TAG: latestHardware
         datalayer.push(["hardware":"\(hardwareString)", "os_version":"\(osString)", "platform":"\(platformString)"])
         
+        if UIDevice.hardwareSimpleDescription(UIDevice.currentDevice())() == "Simulator" {
+            datalayer.push(["device_name":"\(hardwareString)", "platform":"\(platformString)"])
+        }
+        
         tracker.set(kGAIScreenName, value: "User Screen")
         tracker.send(GAIDictionaryBuilder.createScreenView().build())
         
@@ -137,6 +141,8 @@ class UserViewController: UIViewController {
         let app = UIApplication.sharedApplication().delegate as AppDelegate
         let datalayer = app.tagManager.dataLayer
         let container = app.container
+        let tracker = app.ga.defaultTracker
+        
         let appID = app.container?.stringForKey("app_id")!
         let version = app.container?.stringForKey("os_version")!
         let device = app.container?.stringForKey("device_name")!
@@ -145,6 +151,17 @@ class UserViewController: UIViewController {
         
         //app.tagManager
         datalayer.push(["event":"fireGoogleTagButtonPressed", "app_id":"\(appID)", "os_version":"\(version)", "device_name":"\(device)", "platform":"\(platform)"])
+        
+        /*
+        GAIDictionaryBuilder builds an NSMutableDictionary with the keys and values:
+        kGAIEventCategory
+        kGAIEventAction
+        kGAIEventLabel
+        kGAIEventValue
+        */
+        let event = GAIDictionaryBuilder.createEventWithCategory("ui_action", action: "button_press", label: "button", value: nil).build()
+        tracker.send(event)
+        
     }
     
 
