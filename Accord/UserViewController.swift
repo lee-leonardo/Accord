@@ -78,19 +78,21 @@ class UserViewController: UIViewController {
         var datalayer = app.tagManager.dataLayer
         var tracker = app.ga.defaultTracker
         
-        //TAG: appOpened
-        datalayer.push(["event":"openScreen", "platform":"\(platformString)"])
-        
-        //TAG: latestHardware
-        datalayer.push(["hardware":"\(hardwareString)", "os_version":"\(osString)", "platform":"\(platformString)"])
-        
-        if UIDevice.hardwareSimpleDescription(UIDevice.currentDevice())() == "Simulator" {
-            datalayer.push(["device_name":"\(hardwareString)", "platform":"\(platformString)"])
+        NSOperationQueue.mainQueue().addOperationWithBlock {
+            () -> Void in
+            //TAG: appOpened
+            datalayer.push(["event":"openScreen", "platform":"\(platformString)"])
+            
+            //TAG: latestHardware
+            datalayer.push(["hardware":"\(hardwareString)", "os_version":"\(osString)", "platform":"\(platformString)"])
+            
+            if UIDevice.hardwareSimpleDescription(UIDevice.currentDevice())() == "Simulator" {
+                datalayer.push(["device_name":"\(hardwareString)", "platform":"\(platformString)"])
+            }
+            
+            tracker.set(kGAIScreenName, value: "User Screen")
+            tracker.send(GAIDictionaryBuilder.createScreenView().build())
         }
-        
-        tracker.set(kGAIScreenName, value: "User Screen")
-        tracker.send(GAIDictionaryBuilder.createScreenView().build())
-        
     }
     
     override func viewWillDisappear(animated: Bool) {

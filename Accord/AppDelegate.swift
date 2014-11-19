@@ -43,10 +43,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TAGContainerOpenerNotifie
             (note) -> Void in
         }
         
+        
         //Google Tag Manager
         self.tagManager = TAGManager.instance()
         self.tagManager.logger.setLogLevel(kTAGLoggerLogLevelVerbose)
+        self.tagManager.dispatchInterval = 1.0
         
+        //Google Analytics
         self.ga = GAI.sharedInstance()
         self.ga.trackUncaughtExceptions = true
         self.ga.dispatchInterval = 20

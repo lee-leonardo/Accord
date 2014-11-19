@@ -108,7 +108,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     //MARK: UITableViewDataSource
     func prepareCell(cell : UITableViewCell, indexPath : NSIndexPath) {
-        cell.textLabel.text = "HI"
+        cell.textLabel?.text = "HI"
         cell.detailTextLabel?.text = "HI"
     }
     

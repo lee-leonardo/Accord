@@ -17,6 +17,7 @@
 		3836BE921A09808200E38CC0 /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3836BE8F1A09808200E38CC0 /* AddressBookUI.framework */; };
 		3836BE931A09808200E38CC0 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3836BE901A09808200E38CC0 /* MessageUI.framework */; };
 		3836BE951A09823500E38CC0 /* AddressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3836BE941A09823500E38CC0 /* AddressController.swift */; };
+		385359D31A1D2E0000F8AE25 /* AppDelAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385359D21A1D2E0000F8AE25 /* AppDelAnalytics.swift */; };
 		385A3E9A1A05EA220059C67E /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385A3E991A05EA220059C67E /* MessageController.swift */; };
 		385DA08319F1A35D007FED54 /* flow-merge.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA06D19F1A35D007FED54 /* flow-merge.svg */; };
 		385DA08419F1A35D007FED54 /* flow-parallel.svg in Resources */ = {isa = PBXBuildFile; fileRef = 385DA06E19F1A35D007FED54 /* flow-parallel.svg */; };
@@ -102,6 +103,7 @@
 		3836BE8F1A09808200E38CC0 /* AddressBookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBookUI.framework; path = System/Library/Frameworks/AddressBookUI.framework; sourceTree = SDKROOT; };
 		3836BE901A09808200E38CC0 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3836BE941A09823500E38CC0 /* AddressController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressController.swift; sourceTree = "<group>"; };
+		385359D21A1D2E0000F8AE25 /* AppDelAnalytics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelAnalytics.swift; sourceTree = "<group>"; };
 		385A3E991A05EA220059C67E /* MessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
 		385DA06D19F1A35D007FED54 /* flow-merge.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "flow-merge.svg"; sourceTree = "<group>"; };
 		385DA06E19F1A35D007FED54 /* flow-parallel.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "flow-parallel.svg"; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 			children = (
 				38BFE66319CCD1C700E130D5 /* Accord-Bridging-Header.h */,
 				3885866E19CA9CBC00E79A17 /* AppDelegate.swift */,
+				385359D21A1D2E0000F8AE25 /* AppDelAnalytics.swift */,
 				38F7C1701A0B410D00A01E65 /* Constants.swift */,
 				3885869319CA9CD400E79A17 /* Model */,
 				3885869219CA9CCE00E79A17 /* Controller */,
@@ -641,6 +644,7 @@
 				38BFE66619CCD1C700E130D5 /* Chore.m in Sources */,
 				38001C0019F590F300D66A7A /* NewListViewController.swift in Sources */,
 				385DA09E19F1B852007FED54 /* UserViewController.swift in Sources */,
+				385359D31A1D2E0000F8AE25 /* AppDelAnalytics.swift in Sources */,
 				38BFE67819CCD25C00E130D5 /* ChoreList+ChoreListCategory.m in Sources */,
 				38BFE66C19CCD1C800E130D5 /* ChoreList.m in Sources */,
 				385A3E9A1A05EA220059C67E /* MessageController.swift in Sources */,
